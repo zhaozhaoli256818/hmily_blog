@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.hmily_blog.mapper.UserMapper">
+    <select id="findByUser_name" parameterType="User" resultType="User">
+        select * from user
+        <where>
+            user_name=#{user_name}
+        </where>
+    </select>
+
+    <insert id="registUser" parameterType="User">
+--         private Integer gender;
+--         private String user_name;
+--         private String email;
+--         private String birthday;
+--         private String image_url;
+--         private String phone;
+--         private String password;
+--         private String name;
+--         private String introduce;
+        insert into user(id,gender,user_name,phone,password,name)
+        values (
+            #{id},
+            #{gender},
+            #{user_name},
+            #{phone},
+            #{password},
+            #{name}
+        )
+       </insert>
+
+    <select id="checkUsername" parameterType="String" resultType="User">
+        select * from user
+        where
+        user_name=#{user_name}
+    </select>
+</mapper>

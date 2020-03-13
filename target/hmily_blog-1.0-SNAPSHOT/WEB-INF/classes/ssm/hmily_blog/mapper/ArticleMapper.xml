@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.hmily_blog.mapper.ArticleMapper">
+
+
+    <select id="findArticleByPage" resultType="Article">
+        select  id,article_id,title,author,attribute_label,summary,type,classify,update_time
+        from article
+    </select>
+
+    <select id="findArticleByArticleId" parameterType="Long" resultType="Article">
+        select * from article
+        where article_id=#{article_id}
+    </select>
+
+    <select id="findLastArticleByArticleId" parameterType="Integer" resultType="Article">
+        select title,article_id
+        from article
+       where id &lt; #{id} ORDER BY id ASC limit 1;
+    </select>
+
+    <select id="findNextArticleByArticleId" parameterType="Integer" resultType="Article">
+        select title,article_id
+        from article
+        where id &gt; #{id} ORDER BY id ASC limit 1;
+    </select>
+
+    <insert id="saveArticle" parameterType="Article">
+        insert into article(title,author,content,create_time,update_time,attribute_label,summary,article_id,type,classify)
+        values (#{title},#{author},#{content},#{create_time},#{update_time},#{attribute_label},#{summary},#{article_id},#{type},#{classify})
+    </insert>
+</mapper>
