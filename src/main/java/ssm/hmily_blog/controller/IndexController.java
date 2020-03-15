@@ -42,4 +42,9 @@ public class IndexController {
     }
 
 
+    @RequestMapping("/archive")
+    public  String archive(){
+        return "archive";
+    }
+
 }

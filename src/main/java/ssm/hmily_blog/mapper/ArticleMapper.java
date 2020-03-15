@@ -18,4 +18,6 @@ public interface ArticleMapper {
     Article findNextArticleByArticleId(Integer id);
 
     void saveArticle(Article article);
+
+    List<Article> archiveArticle();
 }

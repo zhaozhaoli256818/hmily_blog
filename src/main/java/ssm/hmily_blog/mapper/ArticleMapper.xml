@@ -31,4 +31,11 @@
         insert into article(title,author,content,create_time,update_time,attribute_label,summary,article_id,type,classify)
         values (#{title},#{author},#{content},#{create_time},#{update_time},#{attribute_label},#{summary},#{article_id},#{type},#{classify})
     </insert>
+
+
+    <select id="archiveArticle" resultType="Article">
+        select  article_id,title,attribute_label,summary,update_time
+        from article
+        order by update_time desc
+    </select>
 </mapper>

@@ -14,4 +14,6 @@ public interface ArticleService {
     Article findNextArticleByArticleId(Integer id);
 
     void saveArticle(Article article);
+
+    List<Article> archiveArticle(Integer page, Integer pageSize);
 }

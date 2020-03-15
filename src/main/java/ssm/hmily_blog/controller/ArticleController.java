@@ -44,43 +44,31 @@ public class ArticleController {
     }
 
 
-    @RequestMapping("/page")
-    @ResponseBody
-    public void index(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
-                      @RequestParam(name = "pageSize", required = true, defaultValue = "3") Integer pageSize,
-                      HttpServletRequest request,
-                      HttpServletResponse response
-    ) throws ServletException, IOException {
-        List<Article> pages = articleService.findArticleByPage(page, pageSize);
-        PageInfo pageInfo = new PageInfo(pages);
-        request.setAttribute("pageInfo", pageInfo);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
-    }
-
     @RequestMapping("/saveArticle")
     @ResponseBody
-    public  String saveArticle(Article article) {
-       articleService.saveArticle(article);
-       return "OK";
+    public String saveArticle(Article article) {
+        articleService.saveArticle(article);
+        return "OK";
 
     }
+
     @RequestMapping("/editormdPic")
     @ResponseBody
-    public JSONObject editormdPic (@RequestParam(value = "editormd-image-file", required = true) MultipartFile file,
-                                   HttpServletRequest request,
-                                   HttpServletResponse response) throws Exception{
+    public JSONObject editormdPic(@RequestParam(value = "editormd-image-file", required = true) MultipartFile file,
+                                  HttpServletRequest request,
+                                  HttpServletResponse response) throws Exception {
 
         String trueFileName = file.getOriginalFilename();
 
         String suffix = trueFileName.substring(trueFileName.lastIndexOf("."));
 
-        String fileName = UUID.randomUUID().toString().replace("-","")+suffix;
+        String fileName = UUID.randomUUID().toString().replace("-", "") + suffix;
 
         String path = request.getSession().getServletContext().getRealPath("upload");
 
 
         File targetFile = new File(path, fileName);
-        if(!targetFile.exists()){
+        if (!targetFile.exists()) {
             targetFile.mkdirs();
         }
 
@@ -93,7 +81,7 @@ public class ArticleController {
 
 
         JSONObject res = new JSONObject();
-        res.put("url",request.getContextPath()+"/upload/"+fileName);
+        res.put("url", request.getContextPath() + "/upload/" + fileName);
         res.put("success", 1);
         res.put("message", "upload success!");
 
@@ -101,5 +89,20 @@ public class ArticleController {
 
     }
 
+
+    /**
+     * 归档页面
+     * */
+    @RequestMapping("/archiveArticle")
+    @ResponseBody
+    public PageInfo archiveArticle(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
+                        @RequestParam(name = "pageSize", required = true, defaultValue = "5"
+                        ) Integer pageSize
+                        ){
+        List<Article> list = articleService.archiveArticle(page,pageSize);
+        PageInfo pageInfo = new PageInfo(list);
+        return pageInfo;
+
+    }
 
 }

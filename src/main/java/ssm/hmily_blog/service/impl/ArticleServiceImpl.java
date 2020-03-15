@@ -46,4 +46,10 @@ public class ArticleServiceImpl implements ArticleService {
         article.setSummary(article.getContent().substring(0,50));
         articleMapper.saveArticle(article);
     }
+
+    public List<Article> archiveArticle(Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        List<Article> list = articleMapper.archiveArticle();
+        return list;
+    }
 }

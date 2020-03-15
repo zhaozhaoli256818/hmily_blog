@@ -45,7 +45,7 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">首页 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">归档</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/archive">归档</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">更新</a>

@@ -35,41 +35,6 @@
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
 
 
-    <script type="text/javascript">
-        $(function () {
-            $.ajax({
-                type: 'POST',
-                url: "${pageContext.request.contextPath}/index",
-                dataType: "json",//期待返回的数据类型
-                success: function (data) {
-                    //alert("success:"+data.list[0].title);
-                    // alert(data.pageNum)
-                    $.each(data.list, function (i, n) {
-                        $("#id" + i.toString()).html(n.title)
-                        $("#classify" + i.toString()).html(n.classify)
-                        var unixTimestamp = new Date(n.update_time);
-                        $("#time" + i.toString()).html(unixTimestamp.toLocaleString())
-                        $("#attribute_label" + i.toString()).html(n.attribute_label)
-                        $("#type" + i.toString()).html(n.type)
-                        $("#article_id" + i.toString()).val(n.article_id)
-                        $("#summary" + i.toString()).html(n.summary)
-                    });
-                },
-                error: function (data) {
-                    alert("error" + data);
-                }
-            });
-        });
-        // 日期转换函数
-
-        Date.prototype.toLocaleString = function () {
-            return this.getFullYear() + "/" + (this.getMonth() + 1) + "/" + this.getDate();
-        };
-
-
-    </script>
-
-
 </head>
 <body>
 
@@ -82,6 +47,9 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -92,6 +60,15 @@
         </div>
         <div class="carousel-item">
             <img src="${pageContext.request.contextPath}/static/images/3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="${pageContext.request.contextPath}/static/images/4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="${pageContext.request.contextPath}/static/images/5.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="${pageContext.request.contextPath}/static/images/6.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -138,7 +115,6 @@
         </div>
         <div class="col-8" style="margin-left: 55px">
             <div style="margin-left: 100px;margin-top: 20px">
-                <c:if test="${empty pageInfo}">
                     <div class="card" style="width: 600px;height: 300px;">
                         <a href="javascript:void(0)" onclick="detail(0)"><h5 class="card-header" align="center"><span
                                 id="id0">题目</span></h5></a>
@@ -195,32 +171,6 @@
                                style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
                         </div>
                     </div>
-                </c:if>
-
-                <c:if test="${not empty pageInfo}">
-                    <c:forEach items="${pageInfo.list}" var="p" varStatus="status">
-                        <div class="card" style="width: 38rem;">
-                            <a href="${pageContext.request.contextPath}/article?article_id=${p.article_id}"><h5
-                                    class="card-header" align="center"><span id="id2">${p.title}</span></h5></a>
-                            <div class="card-body">
-                                <span class="badge badge-pill badge-danger" style="margin-left: 20px">原创</span>
-                                <span style="margin-left: 20px" id="time">
-                                        <fmt:formatDate value="${p.update_time}" pattern="yyyy/MM/dd"/>
-                                </span>
-                                <span style="margin-left: 50px" id="type">${p.type}</span>
-                                <span style="margin-left: 50px" id="attribute_label">${p.attribute_label}</span>
-                                <span style="margin-left: 50px">阅读数 58</span>
-                                <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
-                                    <p class="card-text" id="summary">${p.summary}</p>
-                                </div>
-
-                                <a href="${pageContext.request.contextPath}/article?article_id=${p.article_id}"
-                                   class="btn btn-primary" style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
-                            </div>
-                        </div>
-                        <br><br>
-                    </c:forEach>
-                </c:if>
             </div>
         </div>
 
@@ -319,31 +269,23 @@
 <%--分页--%>
 
 
-<div style="margin-left: 480px;margin-top: 20px">
-            <a  href="${pageContext.request.contextPath}/page?page=${pageInfo.pageNum-1}"><button
-                    type="button" class="btn btn-primary">上一页</button></a>
-</div>
-<div style="margin-left: 1015px;margin-top: -40px">
-            <a  href="${pageContext.request.contextPath}/page?page=${pageInfo.pageNum+1}"><button
-                    type="button" class="btn btn-primary">下一页</button></a>
+<%--    隐藏域--%>
+<input type="hidden" id="pageNum" value="1">
+<div style="margin-left: 480px;margin-top: 30px">
+    <a href="javascript:void(0)" onclick="changePage(parseInt($('#pageNum').val())-1)">
+        <button
+                type="button" class="btn btn-primary" >上一页
+        </button>
+    </a>
 </div>
 
-<%--<nav aria-label="..." style="position: absolute;left: 600px;top:2000px">--%>
-<%--    <ul class="pagination">--%>
-<%--        <li class="page-item disabled">--%>
-<%--            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>--%>
-<%--        </li>--%>
-<%--        <li class="page-item"active>--%>
-<%--            <a class="page-link" href="${pageContext.request.contextPath}/page?page=1" aria-current="page">1</a></li>--%>
-<%--        <li class="page-item " >--%>
-<%--            <a class="page-link" href="${pageContext.request.contextPath}/page?page=2">2 <span class="sr-only">(current)</span></a>--%>
-<%--        </li>--%>
-<%--        <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/page?page=3">3</a></li>--%>
-<%--        <li class="page-item">--%>
-<%--            <a class="page-link" href="${pageContext.request.contextPath}/page?page=${pageInfo.pageNum+1}">Next</a>--%>
-<%--        </li>--%>
-<%--    </ul>--%>
-<%--</nav>--%>
+<div style="margin-left: 1015px">
+    <a href="javascript:void(0)" onclick="changePage(parseInt($('#pageNum').val())+1)">
+        <button
+                type="button" class="btn btn-primary" >下一页
+        </button>
+    </a>
+</div>
 
 <div style="height: 100px"></div>
 
@@ -356,6 +298,61 @@
         //alert(val)
         window.location.href = "${pageContext.request.contextPath}/article?article_id=" + id;
     }
+
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            url: "${pageContext.request.contextPath}/index",
+            dataType: "json",//期待返回的数据类型
+            success: function (data) {
+                //alert("success:"+data.list[0].title);
+                // alert(data.pageNum)
+                $("#pageNum").html(data.pageNum)
+                $.each(data.list, function (i, n) {
+                    $("#id" + i.toString()).html(n.title)
+                    $("#classify" + i.toString()).html(n.classify)
+                    var unixTimestamp = new Date(n.update_time);
+                    $("#time" + i.toString()).html(unixTimestamp.toLocaleString())
+                    $("#attribute_label" + i.toString()).html(n.attribute_label)
+                    $("#type" + i.toString()).html(n.type)
+                    $("#article_id" + i.toString()).val(n.article_id)
+                    $("#summary" + i.toString()).html(n.summary)
+                });
+            },
+            error: function (data) {
+                alert("error" + data);
+            }
+        });
+    });
+    // 日期转换函数
+
+    Date.prototype.toLocaleString = function () {
+        return this.getFullYear() + "/" + (this.getMonth() + 1) + "/" + this.getDate();
+    };
+    function changePage(val) {
+        $.ajax({
+            type: 'POST',
+            url: "${pageContext.request.contextPath}/index?page="+val,
+            dataType: "json",//期待返回的数据类型
+            success: function (data) {
+                $("#pageNum").val(data.pageNum)
+                $.each(data.list, function (i, n) {
+                    $("#id" + i.toString()).html(n.title)
+                    $("#classify" + i.toString()).html(n.classify)
+                    var unixTimestamp = new Date(n.update_time);
+                    $("#time" + i.toString()).html(unixTimestamp.toLocaleString())
+                    $("#attribute_label" + i.toString()).html(n.attribute_label)
+                    $("#type" + i.toString()).html(n.type)
+                    $("#article_id" + i.toString()).val(n.article_id)
+                    $("#summary" + i.toString()).html(n.summary)
+                });
+            },
+            error: function (data) {
+                alert("error" + data);
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
