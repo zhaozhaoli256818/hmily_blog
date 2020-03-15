@@ -3,6 +3,7 @@ package ssm.hmily_blog.mapper;
 import com.github.pagehelper.PageInfo;
 import ssm.hmily_blog.pojo.Article;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ArticleMapper {
@@ -20,4 +21,6 @@ public interface ArticleMapper {
     void saveArticle(Article article);
 
     List<Article> archiveArticle();
+
+    List<Article> findArchiveByMonth(Date update_time);
 }

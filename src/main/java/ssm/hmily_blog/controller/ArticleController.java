@@ -18,7 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -100,6 +102,26 @@ public class ArticleController {
                         ) Integer pageSize
                         ){
         List<Article> list = articleService.archiveArticle(page,pageSize);
+        PageInfo pageInfo = new PageInfo(list);
+        return pageInfo;
+
+    }
+
+    @RequestMapping("/findArchiveByMonth")
+    @ResponseBody
+    public PageInfo findArchiveByMonth(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
+                                   @RequestParam(name = "pageSize", required = true, defaultValue = "5") Integer pageSize,
+                                        String update_time
+    ){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月");
+        Date time = null;
+        try {
+            time  = sdf.parse(update_time);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        List<Article> list = articleService.findArchiveByMonth(page,pageSize,time);
         PageInfo pageInfo = new PageInfo(list);
         return pageInfo;
 

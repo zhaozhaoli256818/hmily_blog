@@ -52,4 +52,10 @@ public class ArticleServiceImpl implements ArticleService {
         List<Article> list = articleMapper.archiveArticle();
         return list;
     }
+
+    public List<Article> findArchiveByMonth(Integer page, Integer pageSize, Date update_time) {
+        PageHelper.startPage(page,pageSize);
+        List<Article> list = articleMapper.findArchiveByMonth(update_time);
+        return list;
+    }
 }

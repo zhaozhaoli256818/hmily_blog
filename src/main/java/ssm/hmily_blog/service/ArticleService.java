@@ -2,6 +2,7 @@ package ssm.hmily_blog.service;
 
 import ssm.hmily_blog.pojo.Article;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ArticleService {
@@ -16,4 +17,6 @@ public interface ArticleService {
     void saveArticle(Article article);
 
     List<Article> archiveArticle(Integer page, Integer pageSize);
+
+    List<Article> findArchiveByMonth(Integer page, Integer pageSize, Date update_time);
 }

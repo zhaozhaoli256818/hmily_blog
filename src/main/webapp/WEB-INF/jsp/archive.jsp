@@ -62,17 +62,17 @@
 
 <div class="card shadow text-white bg-warning mb-3" style="width: 18rem; position: fixed;left: 1190px;top:100px">
     <div class="card-header">
-        <div style="float: left;margin-left: 50px">日期归类</div>
-        <div style="float: left;margin-left: 20px">作者信息</div>
+        <div style="float: left;margin-left: 50px;cursor: pointer" onclick="changeDiv(0)">日期归类</div>
+        <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
     </div>
-    <div align="center">
-        <div class="card-header"><a href="#">>>2020年3月</a></div>
-        <div class="card-header"><a href="#">>>2020年4月</a></div>
-        <div class="card-header"><a href="#">>>2020年5月</a></div>
-        <div class="card-header"><a href="#">>>2020年6月</a></div>
-        <div class="card-header"><a href="#">>>2020年7月</a></div>
-        <div class="card-header"><a href="#">>>2020年8月</a></div>
-        <div class="card-header"><a href="#">>>2020年9月</a></div>
+    <div align="center" id="archive_time">
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年03月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年04月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年05月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年06月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年07月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年08月</a></div>
+        <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年09月</a></div>
     </div>
 </div>
 
@@ -99,7 +99,7 @@
                     <a href="javascript:void(0)" onclick="detail(0)"><h4 id="t0" align="center">Title 1</h4></a>
                     <div id="div0"></div>
                 </div>
-                <div class="cntl-image"><img src="${pageContext.request.contextPath}/static/timeline/img/1.jpg">
+                <div class="cntl-image"><img src="${pageContext.request.contextPath}/static/timeline/img/4.jpg">
                 </div>
                 <div style="display: none" id="article_id0"></div>
                 <div class="cntl-icon cntl-center" id="time0" style="font-size:smaller ">'00</div>
@@ -220,6 +220,7 @@
         }
 
         function changePage(val) {
+            // alert(val)
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/archiveArticle?page="+val,
@@ -237,6 +238,29 @@
                 }
             });
         }
+
+        function findArchiveByMonth(val) {
+            //alert(val)
+            var update_time = val.substring(2,val.length)
+            $.ajax({
+                type: "POST",
+                url: "${pageContext.request.contextPath}/findArchiveByMonth?update_time="+update_time,
+                //contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#pageNum").val(data.pageNum)
+                    $.each(data.list, function (i, n) {
+                        $("#t" + i.toString()).html(n.title)
+                        $("#div" + i.toString()).html(n.summary)
+                        $("#article_id" + i.toString()).html(n.article_id)
+                        var unixTimestamp = new Date(n.update_time);
+                        $("#time" + i.toString()).html(unixTimestamp.toLocaleString())
+                    });
+
+                }
+            });
+        }
+
     </script>
 </body>
 </html>
