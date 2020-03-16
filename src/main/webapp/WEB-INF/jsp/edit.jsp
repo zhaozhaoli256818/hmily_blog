@@ -54,11 +54,12 @@
 <%--    </div>--%>
 
     <div id="my-editormd" >
-        <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;"></textarea>
+        <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;">[TOC]</textarea>
         <!-- 注意：name属性的值-->
         <textarea id="my-editormd-html-code" name="my-editormd-html-code" style="display:none;"></textarea>
     </div>
 </div>
+
 
 <jsp:include page="../../footer.jsp"></jsp:include>
 
@@ -153,33 +154,36 @@
 <script src="${pageContext.request.contextPath}/static/editormd/editormd.min.js"></script>
     <script type="text/javascript">
         var testEditor;
-        testEditor = editormd("my-editormd", {
-            placeholder:'本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字，这里就不解释了
-            width: "90%",
-            height: 640,
-            syncScrolling: "single",
-            path: "${pageContext.request.contextPath}/static/editormd/lib/",   //你的path路径（原资源文件中lib包在我们项目中所放的位置）
-            theme: "dark",//工具栏主题
-            previewTheme: "dark",//预览主题
-            editorTheme: "pastel-on-dark",//编辑主题
-            saveHTMLToTextarea: true,
-            emoji: true,
-            taskList: true,
-            tocm: true,         // Using [TOCM]
-            tex: true,                   // 开启科学公式TeX语言支持，默认关闭
-            flowChart : true,             // 开启流程图支持，默认关闭
-            sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
-            toolbarIcons : function() {  //自定义工具栏，后面有详细介绍
-                return editormd.toolbarModes['full']; // full, simple, mini
-            },
+        $(function () {
+            testEditor = editormd("my-editormd", {
+                placeholder:'本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字，这里就不解释了
+                width: "90%",
+                height: 640,
+                syncScrolling: "single",
+                path: "${pageContext.request.contextPath}/static/editormd/lib/",   //你的path路径（原资源文件中lib包在我们项目中所放的位置）
+                theme: "dark",//工具栏主题
+                previewTheme: "dark",//预览主题
+                editorTheme: "pastel-on-dark",//编辑主题
+                saveHTMLToTextarea: true,
+                emoji: true,
+                taskList: true,
+                tocm: true,         // Using [TOCM]
+                tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                flowChart : true,             // 开启流程图支持，默认关闭
+                sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                toolbarIcons : function() {  //自定义工具栏，后面有详细介绍
+                    return editormd.toolbarModes['full']; // full, simple, mini
+                },
 
-            imageUpload : true,
-            imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-            imageUploadURL : "${pageContext.request.contextPath}/editormdPic",
-            onload: function () {
+                imageUpload : true,
+                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "${pageContext.request.contextPath}/editormdPic",
 
-            }
-        });
+            });
+
+            testEditor.config("tocDropdown", fasle);//TOC默认
+
+        })
 
     </script>
 

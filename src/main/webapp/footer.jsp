@@ -25,6 +25,8 @@
     <script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" type="text/javascript"></script>　
 </head>
 <body>
             <hr>

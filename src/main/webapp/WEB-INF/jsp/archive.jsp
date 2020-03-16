@@ -17,13 +17,12 @@
     <script src="${pageContext.request.contextPath}/static/js/jquery-1.11.3.min.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
 
-
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="../../header.jsp"></jsp:include>
-<div class="card shadow text-white bg-info mb-3"
+<div class="head-one card shadow text-white bg-info mb-3"
      style="width: 20rem;height:14rem;position: absolute;left: 25px;top: 80px">
     <div class="card-body">
         <i class="fa fa-quote-left" style="float: left;"></i>
@@ -325,5 +324,7 @@
         }
 
     </script>
+
+
 </body>
 </html>

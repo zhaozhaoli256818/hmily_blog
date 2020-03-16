@@ -19,6 +19,9 @@
     <script src="${pageContext.request.contextPath}/static/js/jquery-1.11.3.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
+    <!-- 标题栏浮动隐藏JS -->
+    <script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js" type="text/javascript"></script>
+
     <style>
         .circleImg {
             border-radius: 30px;
@@ -29,7 +32,7 @@
 </head>
 <body>
 <%--导航栏--%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <img src="${pageContext.request.contextPath}/static/images/tx.jpeg" class="circleImg" id="circleImg" style="width: 50px;height: 50px"/>
     &nbsp;&nbsp;
     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp"><h3 style="font-family: 'Adobe 楷体 Std R';">hmily_blog</h3></a>
@@ -102,5 +105,7 @@
         </form>
     </div>
 </nav>
+
+
 </body>
 </html>

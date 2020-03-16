@@ -12,10 +12,10 @@
     <title>文章详情页面</title>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/editormd/css/editormd.css"/>
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
 
-
-</head>
-<body>
+   </head>
 <body>
 <jsp:include page="../../header.jsp"></jsp:include>
 
@@ -119,8 +119,9 @@
                         <span style="margin-left: 50px" id="type0">${article.type}</span>
                         <span style="margin-left: 50px" id="attribute_label0">${article.attribute_label}</span>
                         <span style="margin-left: 50px">阅读数 58</span>
-                        <div id="test-editormd-view2" style="width: 600px">
-                            <textarea id="append-test" style="display:none;">${article.content}</textarea>
+                        <div id="test-editormd-view">
+                            <textarea style="display:none;"
+                                      name="test-editormd-markdown-doc">${article.content}</textarea>
                         </div>
 
                         <div style="float: left">
@@ -147,52 +148,63 @@
             </div>
         </div>
 
-        <div class="col-2" id="main-right-div">
-            <div class="card text-white bg-dark"
-                 style="width: 20rem;height:22rem;margin-top: 20px;position: fixed;top: 68px">
-                <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
-                     style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">HMILY_BLOG</h5>
-                    <p class="card-text" align="center">负重前行</p>
+        <div class="col-2">
+            <div class="card shadow bg-light mb-3" style="width: 20rem; position: fixed;left: 1100px;top:90px">
+                <div class="card-header">
+                    <div style="float: left;margin-left: 60px;cursor: pointer" onclick="changeDiv(0)">文章目录</div>
+                    <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
                 </div>
-                <div class="container" style="position: absolute;left: 15px;top: 210px">
-                    <div class="row">
-                        <div class="col-4">文章</div>
-                        <div class="col-4">分类</div>
-                        <div class="col-4">标签</div>
+                <div align="center" id="toc">
+                    <div class="markdown-body editormd-preview-container" id="custom-toc-container">
+                        #custom-toc-container
                     </div>
                 </div>
-                <div class="container" style="position: absolute;left: 22px;top: 235px">
-                    <div class="row">
-                        <div class="col-4">15</div>
-                        <div class="col-4">12</div>
-                        <div class="col-4">10</div>
+                <div id="author" class="card  bg-light" style="width: 20rem;height:22rem;display: none">
+                    <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
+                         style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">HMILY_BLOG</h5>
+                        <p class="card-text" align="center">负重前行</p>
                     </div>
+                    <div class="container" style="position: absolute;left: 15px;top: 210px">
+                        <div class="row">
+                            <div class="col-4">文章</div>
+                            <div class="col-4">分类</div>
+                            <div class="col-4">标签</div>
+                        </div>
+                    </div>
+                    <div class="container" style="position: absolute;left: 22px;top: 235px">
+                        <div class="row">
+                            <div class="col-4">15</div>
+                            <div class="col-4">12</div>
+                            <div class="col-4">10</div>
+                        </div>
+                    </div>
+                    <div id="icons" style="margin-top: 70px">
+
+                        <a class="card-icons" href="https://github.com/zhaozhaoli256818" target="_blank"><i
+                                class="fa fa-github" title="活跃不起来滴小github~"></i></a>
+                        <a class="card-icons" href="https://gitee.com/zhaozhaoli256818" target="_blank"><i
+                                class="fa fa-gg"
+                                title="码码码码码云~"></i></a>
+
+                        <a class="card-icons"
+                           href="http://wpa.qq.com/msgrd?v=3&amp;uin=1191599851&amp;site=qq&amp;menu=yes"
+                           target="_blank"><i class="fa fa-qq" title="点击QQ联系俺~"></i></a>
+                        <a class="card-icons" href="javascript:void(0);" data-toggle="popover"><i
+                                class="fa fa-weixin"></i></a>
+
+
+                        <a class="card-icons" href="https://weibo.com/6578163867/profile?topnav=1&wvr=6&is_all=1"
+                           target="_blank"><i
+                                class="fa fa-weibo" title="基本不碰的小微博~"></i></a>
+                    </div>
+
                 </div>
-                <div id="icons">
-
-                    <a class="card-icons" href="https://github.com/zhaozhaoli256818" target="_blank"><i
-                            class="fa fa-github" title="活跃不起来滴小github~"></i></a>
-                    <a class="card-icons" href="#" target="_blank"><i class="fa fa-gg"
-                                                                      title="码码码码码云~"></i></a>
-
-                    <a class="card-icons"
-                       href="http://wpa.qq.com/msgrd?v=3&amp;uin=1191599851&amp;site=qq&amp;menu=yes"
-                       target="_blank"><i class="fa fa-qq" title="点击QQ联系俺~"></i></a>
-                    <a class="card-icons" href="javascript:void(0);" data-toggle="popover"><i class="fa fa-weixin"></i></a>
-
-
-                    <a class="card-icons" href="https://weibo.com/6578163867/profile?topnav=1&wvr=6&is_all=1"
-                       target="_blank"><i
-                            class="fa fa-weibo" title="基本不碰的小微博~"></i></a>
-                </div>
-                <div style="height: 31px"></div>
             </div>
-
-
         </div>
+
     </div>
 </div>
 
@@ -200,12 +212,6 @@
 <jsp:include page="../../footer.jsp"></jsp:include>
 
 
-
-
-
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/editormd/css/editormd.css"/>
-<link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
 <script src="${pageContext.request.contextPath}/static/js/jquery-1.11.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/editormd/lib/marked.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/editormd/lib/prettify.min.js"></script>
@@ -218,15 +224,30 @@
 
 <script src="${pageContext.request.contextPath}/static/editormd/editormd.min.js"></script>
 <script type="text/javascript">
-    var testEditormdView2;
-    testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
-        htmlDecode      : "style,script,iframe",  // you can filter tags decode
-        emoji           : true,
-        taskList        : true,
-        tex             : true,  // 默认不解析
-        flowChart       : true,  // 默认不解析
-        sequenceDiagram : true,  // 默认不解析
+    var testEditormdView;
+    $(function () {
+        testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+            htmlDecode: "style,script,iframe",  // you can filter tags decode
+            emoji: true,
+            taskList: true,
+            tex: true,  // 默认不解析
+            flowChart: true,  // 默认不解析
+            sequenceDiagram: true,  // 默认不解析
+            tocContainer: "#custom-toc-container", // 自定义 ToC 容器层
+        });
+
     });
+
+    function changeDiv(val) {
+        if (val == 0) {
+            $("#toc").css("display", "block");
+            $("#author").css("display", "none");
+        } else {
+            $("#toc").css("display", "none");
+            $("#author").css("display", "block");
+        }
+    }
+
 
 </script>
 
