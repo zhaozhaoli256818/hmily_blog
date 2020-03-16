@@ -42,7 +42,7 @@
 
 <%--轮播图--%>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 670px">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -53,22 +53,22 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="${pageContext.request.contextPath}/static/images/1.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/1.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/images/2.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/images/3.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/3.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/images/4.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/4.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/images/5.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/5.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/images/6.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/6.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -201,7 +201,7 @@
 
                     <a class="card-icons" href="https://github.com/zhaozhaoli256818" target="_blank"><i
                             class="fa fa-github" title="活跃不起来滴小github~"></i></a>
-                    <a class="card-icons" href="#" target="_blank"><i class="fa fa-gg"
+                    <a class="card-icons" href="https://gitee.com/zhaozhaoli256818" target="_blank"><i class="fa fa-gg"
                                                                       title="码码码码码云~"></i></a>
 
                     <a class="card-icons"

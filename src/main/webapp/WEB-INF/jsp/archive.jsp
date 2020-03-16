@@ -60,10 +60,10 @@
 </div>
 
 
-<div class="card shadow text-white bg-warning mb-3" style="width: 18rem; position: fixed;left: 1190px;top:100px">
+<div class="card shadow bg-light mb-3" style="width: 20rem; position: fixed;left: 1190px;top:100px">
     <div class="card-header">
-        <div style="float: left;margin-left: 50px;cursor: pointer" onclick="changeDiv(0)">日期归类</div>
-        <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
+        <div style="float: left;margin-left: 60px;cursor: pointer"  onclick="changeDiv(0)">日期归类</div>
+        <div style="float: left;margin-left: 20px;cursor: pointer"  onclick="changeDiv(1)">作者信息</div>
     </div>
     <div align="center" id="archive_time">
         <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年03月</a></div>
@@ -74,10 +74,53 @@
         <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年08月</a></div>
         <div class="card-header"><a href="javascript:void (0)" onclick="findArchiveByMonth(this.text)">>>2020年09月</a></div>
     </div>
+    <div id="author" class="card  bg-light" style="width: 20rem;height:22rem;display: none">
+        <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
+             style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">HMILY_BLOG</h5>
+            <p class="card-text" align="center">负重前行</p>
+        </div>
+        <div class="container" style="position: absolute;left: 15px;top: 210px">
+            <div class="row">
+                <div class="col-4">文章</div>
+                <div class="col-4">分类</div>
+                <div class="col-4">标签</div>
+            </div>
+        </div>
+        <div class="container" style="position: absolute;left: 22px;top: 235px">
+            <div class="row">
+                <div class="col-4">15</div>
+                <div class="col-4">12</div>
+                <div class="col-4">10</div>
+            </div>
+        </div>
+        <div id="icons" style="margin-top: 70px">
+
+            <a class="card-icons" href="https://github.com/zhaozhaoli256818" target="_blank"><i
+                    class="fa fa-github" title="活跃不起来滴小github~"></i></a>
+            <a class="card-icons" href="https://gitee.com/zhaozhaoli256818" target="_blank"><i class="fa fa-gg"
+                                                              title="码码码码码云~"></i></a>
+
+            <a class="card-icons"
+               href="http://wpa.qq.com/msgrd?v=3&amp;uin=1191599851&amp;site=qq&amp;menu=yes"
+               target="_blank"><i class="fa fa-qq" title="点击QQ联系俺~"></i></a>
+            <a class="card-icons" href="javascript:void(0);" data-toggle="popover"><i class="fa fa-weixin"></i></a>
+
+
+            <a class="card-icons" href="https://weibo.com/6578163867/profile?topnav=1&wvr=6&is_all=1"
+               target="_blank"><i
+                    class="fa fa-weibo" title="基本不碰的小微博~"></i></a>
+        </div>
+
+    </div>
 </div>
 
 
 <div class="htmleaf-container" style="width: 800px">
+    <div id="month" style="position: absolute;left: 820px ;top:90px;font-size: 1em;"></div>
+    <div id="total" style="position: absolute;left: 920px ;top:90px;font-size: 1em;"></div>
     <header class="htmleaf-header">
         <div class="htmleaf-links">
             <a class="htmleaf-icon icon-htmleaf-home-outline" href="index.jsp" title="博客首页"
@@ -221,9 +264,17 @@
 
         function changePage(val) {
             // alert(val)
+            //alert(typeof $("#month").html().trim())
+            var url;
+            if($("#month").html() != ''){
+                url = "${pageContext.request.contextPath}/findArchiveByMonth?page="+val+"&update_time="+$('#month').html()
+            }else {
+                url =  "${pageContext.request.contextPath}/archiveArticle?page="+val
+            }
             $.ajax({
                 type: "POST",
-                url: "${pageContext.request.contextPath}/archiveArticle?page="+val,
+                <%--url: "${pageContext.request.contextPath}/archiveArticle?page="+val,--%>
+                url: url,
                 dataType: "json",
                 success: function (data) {
                     $("#pageNum").val(data.pageNum)
@@ -242,12 +293,14 @@
         function findArchiveByMonth(val) {
             //alert(val)
             var update_time = val.substring(2,val.length)
+            $("#month").html(update_time)
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/findArchiveByMonth?update_time="+update_time,
                 //contentType: "application/json;charset=utf-8",
                 dataType: "json",
                 success: function (data) {
+                    $("#total").html("共计"+data.total+"篇")
                     $("#pageNum").val(data.pageNum)
                     $.each(data.list, function (i, n) {
                         $("#t" + i.toString()).html(n.title)
@@ -259,6 +312,16 @@
 
                 }
             });
+        }
+
+        function changeDiv(val) {
+            if(val == 0){
+                $("#archive_time").css("display","block");
+                $("#author").css("display","none");
+            }else{
+                $("#archive_time").css("display","none");
+                $("#author").css("display","block");
+            }
         }
 
     </script>
