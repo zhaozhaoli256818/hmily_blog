@@ -32,8 +32,9 @@
 </head>
 <body>
 <%--导航栏--%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img src="${pageContext.request.contextPath}/static/images/tx.jpeg" class="circleImg" id="circleImg" style="width: 50px;height: 50px"/>
+<%--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">--%>
+<nav class="navbar text-light navbar-expand-lg navbar-light" style="background:rgba(40,42,44,.6);border-color: rgba(40,42,44,.0);height: 40px">
+    <img src="${pageContext.request.contextPath}/static/images/tx.jpeg" class="circleImg" id="circleImg" style="width: 30px;height: 30px"/>
     &nbsp;&nbsp;
     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp"><h3 style="font-family: 'Adobe 楷体 Std R';">hmily_blog</h3></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -41,30 +42,38 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 90px">
+        <ul class="navbar-nav text-white mr-auto">
+            <img style="width: 2em;height: 2em;" src="${pageContext.request.contextPath}/static/images/icons/house.svg">
             <li class="nav-item active">
                 <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">首页 <span class="sr-only">(current)</span></a>
             </li>
+            <li></li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/folder.svg">
             <li class="nav-item">
                 <a class="nav-link" href="${pageContext.request.contextPath}/archive">归档</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/folder-symlink.svg">
             <li class="nav-item">
                 <a class="nav-link" href="#">更新</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/music-player.svg">
             <li class="nav-item">
                 <a class="nav-link" href="#">音乐馆</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/bookmark.svg">
             <li class="nav-item">
                 <a class="nav-link" href="${pageContext.request.contextPath}/edit">写博客</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/pencil.svg">
             <li class="nav-item">
                 <a class="nav-link" href="#">留言板</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/at.svg">
             <li class="nav-item">
                 <a class="nav-link" href="#">友情链接</a>
             </li>
+            <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/cursor.svg">
             <li class="nav-item">
                 <a class="nav-link" href="#">关于我</a>
             </li>
@@ -75,7 +84,7 @@
         &nbsp;&nbsp;&nbsp;
         <c:if test="${not empty loginUser}">
             <div class="btn-group" style="margin-right: 50px">
-                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         ${loginUser.name} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -88,9 +97,9 @@
         </c:if>
         <c:if test="${empty loginUser}">
 
-            <div class="btn-group" style="margin-right: 50px">
-                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    未登录 <span class="caret"></span>
+            <div class="btn-group" style="margin-right: 20px">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img style="width: 2.5em;height: 2.5em" src="${pageContext.request.contextPath}/static/images/icons/people-circle.svg">
                 </button>
                 <ul class="dropdown-menu">
                     <a class="dropdown-item" href="${pageContext.request.contextPath}/user/toLogin">登录</a>
@@ -99,10 +108,10 @@
                 </ul>
             </div>
         </c:if>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-        </form>
+<%--        <form class="form-inline my-2 my-lg-0">--%>
+<%--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
+<%--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>--%>
+<%--        </form>--%>
     </div>
 </nav>
 

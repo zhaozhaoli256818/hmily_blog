@@ -115,10 +115,14 @@
                         <input id="article_id0" type="hidden">
                         <span class="badge badge-pill badge-danger" style="margin-left: 20px"
                               id="classify0">${article.classify}</span>
-                        <span style="margin-left: 20px" id="time0">${update_time}</span>
-                        <span style="margin-left: 50px" id="type0">${article.type}</span>
-                        <span style="margin-left: 50px" id="attribute_label0">${article.attribute_label}</span>
-                        <span style="margin-left: 50px">阅读数 58</span>
+                        <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                        <span id="time0">${update_time}</span>
+                        <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                        <span  id="type2"><a href="${pageContext.request.contextPath}/toProgramRecordOrOther?type=${article.type}">${article.type}</a></span>
+                        <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                        <span id="attribute_label0">${article.attribute_label}</span>
+                        <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                        <span   >阅读数 58</span>
                         <div id="test-editormd-view">
                             <textarea style="display:none;"
                                       name="test-editormd-markdown-doc">${article.content}</textarea>

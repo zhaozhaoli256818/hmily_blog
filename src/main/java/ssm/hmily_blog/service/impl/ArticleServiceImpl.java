@@ -42,7 +42,6 @@ public class ArticleServiceImpl implements ArticleService {
         article.setCreate_time(new Date());
         article.setUpdate_time(new Date());
         article.setClassify("原创");
-        article.setType("java");
         article.setSummary(article.getContent().substring(0,50));
         articleMapper.saveArticle(article);
     }
@@ -56,6 +55,18 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> findArchiveByMonth(Integer page, Integer pageSize, Date update_time) {
         PageHelper.startPage(page,pageSize);
         List<Article> list = articleMapper.findArchiveByMonth(update_time);
+        return list;
+    }
+
+    public List<Article> program_record(Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        List<Article> list = articleMapper.program_record();
+        return list;
+    }
+
+    public List<Article> mood(Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        List<Article> list = articleMapper.mood();
         return list;
     }
 }

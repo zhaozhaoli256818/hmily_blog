@@ -42,16 +42,17 @@
         </div>
         <div class="input-group input-group-lg mb-3" style="margin-top: 20px">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="articleCategory">文章类别</label>
+                <label class="input-group-text" for="articleCategory">文章标签</label>
             </div>
             <select class="custom-select" id="articleCategory">
             </select>
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="type">文章类型</label>
+            </div>
+            <select class="custom-select" id="type">
+            </select>
         </div>
-
     </header>
-<%--    <div id="test-editormd">--%>
-<%--			<textarea id="articleContent" style="display: none;"></textarea>--%>
-<%--    </div>--%>
 
     <div id="my-editormd" >
         <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;">[TOC]</textarea>
@@ -64,27 +65,49 @@
 <jsp:include page="../../footer.jsp"></jsp:include>
 
 <script>
+    <%--$(function () {--%>
+    <%--    $.ajax({--%>
+    <%--        type: "GET",--%>
+    <%--        url: '${pageContext.request.contextPath}/dict?type_code=001',--%>
+    <%--        dataType: 'json',--%>
+    <%--        contentType: "application/json",--%>
+    <%--       // cache: false,--%>
+    <%--        success: function (data) {--%>
+    <%--            $.each(data,function (i,obj) {--%>
+    <%--                //alert(obj['item_name'])--%>
+    <%--                var $option = $("<option value='"+obj['item_name']+"'>"+obj['item_name']+"</option>");--%>
+    <%--                //alert($option.val())--%>
+    <%--                $("#articleCategory").append($option);--%>
+
+    <%--            });--%>
+
+    <%--        }--%>
+    <%--    });--%>
+    <%--});--%>
     $(function () {
-        $.ajax({
-            type: "GET",
-            url: '${pageContext.request.contextPath}/dict?type_code=001',
-            dataType: 'json',
-            contentType: "application/json",
-           // cache: false,
-            success: function (data) {
-                $.each(data,function (i,obj) {
-                    //alert(obj['item_name'])
-                    var $option = $("<option value='"+obj['item_name']+"'>"+obj['item_name']+"</option>");
-                    //alert($option.val())
-                    $("#articleCategory").append($option);
+        loadArticelType('001','articleCategory')
+        loadArticelType('002','type')
+    })
 
-                });
+function loadArticelType(val,position) {
+    $.ajax({
+        type: "GET",
+        url: '${pageContext.request.contextPath}/dict?type_code='+val,
+        dataType: 'json',
+        contentType: "application/json",
+        // cache: false,
+        success: function (data) {
+            $.each(data,function (i,obj) {
+                //alert(obj['item_name'])
+                var $option = $("<option value='"+obj['item_name']+"'>"+obj['item_name']+"</option>");
+                //alert($option.val())
+                $("#"+position).append($option);
 
-            }
-        });
+            });
+
+        }
     });
-
-
+}
 
     /* 发送文章*/
     var writeArticle = {
@@ -99,10 +122,11 @@
                 var content = testEditor.getMarkdown();
 
                 var attribute_label = $("#articleCategory").val();
+                var type = $("#type").val();
                 $.ajax({
                     type: "POST",
                     url: '${pageContext.request.contextPath}/saveArticle',
-                    data: {'title': title, 'content': content, 'attribute_label': attribute_label},
+                    data: {'title': title, 'content': content, 'attribute_label': attribute_label,'type':type},
                     dataType: 'json',
                     //contentType:"application/json",
                     //cache: false,
@@ -141,6 +165,10 @@
 
             if (typeof (attribute_label) == undefined || attribute_label == null || attribute_label == "") {
                 alert("请填写文章标签!");
+                return false;
+            }
+            if (typeof (type) == undefined || type == null || type == "") {
+                alert("请填写文章类型!");
                 return false;
             }
 

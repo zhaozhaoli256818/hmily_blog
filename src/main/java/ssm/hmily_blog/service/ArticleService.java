@@ -19,4 +19,8 @@ public interface ArticleService {
     List<Article> archiveArticle(Integer page, Integer pageSize);
 
     List<Article> findArchiveByMonth(Integer page, Integer pageSize, Date update_time);
+
+    List<Article> program_record(Integer page, Integer pageSize);
+
+    List<Article> mood(Integer page, Integer pageSize);
 }

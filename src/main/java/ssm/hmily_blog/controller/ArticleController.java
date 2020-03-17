@@ -127,4 +127,35 @@ public class ArticleController {
 
     }
 
+    @RequestMapping("/program_record")
+    @ResponseBody
+    public PageInfo program_record(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
+                                       @RequestParam(name = "pageSize", required = true, defaultValue = "5") Integer pageSize
+    ){
+        List<Article> list = articleService.program_record(page,pageSize);
+        PageInfo pageInfo = new PageInfo(list);
+        return pageInfo;
+    }
+    @RequestMapping("/mood")
+    @ResponseBody
+    public PageInfo mood(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
+                                   @RequestParam(name = "pageSize", required = true, defaultValue = "5") Integer pageSize
+    ){
+        List<Article> list = articleService.mood(page,pageSize);
+        PageInfo pageInfo = new PageInfo(list);
+        return pageInfo;
+    }
+
+
+    @RequestMapping("/toProgramRecordOrOther")
+    public String toProgramRecord(String type){
+        String url = null;
+        if("程序录".equals(type)){
+            url = "program_record";
+        }
+        if("心情窗".equals(type)){
+            url = "mood";
+        }
+        return "type/"+url;
+    }
 }

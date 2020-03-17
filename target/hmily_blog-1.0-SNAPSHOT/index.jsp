@@ -34,7 +34,6 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
 
-
 </head>
 <body>
 
@@ -42,7 +41,7 @@
 
 <%--轮播图--%>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 670px">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 700px">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -122,10 +121,16 @@
                             <input id="article_id0" type="hidden">
                             <span class="badge badge-pill badge-danger" style="margin-left: 20px"
                                   id="classify0">原创</span>
-                            <span style="margin-left: 20px" id="time0">2020-3-20</span>
-                            <span style="margin-left: 50px" id="type0">文章类别</span>
-                            <span style="margin-left: 50px" id="attribute_label0">标签</span>
-                            <span style="margin-left: 50px">阅读数 58</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                            <span  id="time0">
+                                 2020-3-20
+                            </span>
+                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                            <span id="type0" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                            <span   id="attribute_label0">标签</span>
+                            <img style="margin-left:30px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                            <span>阅读数 58</span>
                             <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
                                 <p class="card-text" id="summary0">文章总结</p>
                             </div>
@@ -141,10 +146,16 @@
                             <input id="article_id1" type="hidden">
                             <span class="badge badge-pill badge-danger" style="margin-left: 20px"
                                   id="classify1">原创</span>
-                            <span style="margin-left: 20px" id="time1">2020-3-20</span>
-                            <span style="margin-left: 50px" id="type1">文章类别</span>
-                            <span style="margin-left: 50px" id="attribute_label1">标签</span>
-                            <span style="margin-left: 50px">阅读数 58</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                            <span  id="time1">
+                                 2020-3-20
+                            </span>
+                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                            <span  id="type1" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                            <span   id="attribute_label1">标签</span>
+                            <img style="margin-left:30px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                            <span>阅读数 58</span>
                             <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
                                 <p class="card-text" id="summary1">文章总结</p>
                             </div>
@@ -160,10 +171,16 @@
                             <input id="article_id2" type="hidden">
                             <span class="badge badge-pill badge-danger" style="margin-left: 20px"
                                   id="classify2">原创</span>
-                            <span style="margin-left: 20px" id="time2">2020-3-20</span>
-                            <span style="margin-left: 50px" id="type2">类型</span>
-                            <span style="margin-left: 50px" id="attribute_label2">标签</span>
-                            <span style="margin-left: 50px">阅读数 58</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                            <span  id="time2">
+                                 2020-3-20
+                            </span>
+                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                            <span  id="type2" style="cursor: pointer" onclick="toTypePage(this)">类型</span>
+                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                            <span id="attribute_label2">标签</span>
+                            <img style="margin-left:20px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                            <span>阅读数 58</span>
                             <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
                                 <p class="card-text" id="summary2">文章总结</p>
                             </div>
@@ -279,7 +296,7 @@
     </a>
 </div>
 
-<div style="margin-left: 1015px">
+<div style="margin-left: 1015px;margin-top: -40px">
     <a href="javascript:void(0)" onclick="changePage(parseInt($('#pageNum').val())+1)">
         <button
                 type="button" class="btn btn-primary" >下一页
@@ -351,6 +368,10 @@
                 alert("error" + data);
             }
         });
+    }
+    function toTypePage(val) {
+        //alert($(val).html())
+        window.location.href = "${pageContext.request.contextPath}/toProgramRecordOrOther?type="+$(val).html()
     }
 
 </script>

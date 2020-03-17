@@ -34,15 +34,29 @@
 
 
     <select id="archiveArticle" resultType="Article">
-        select  article_id,title,attribute_label,summary,update_time
+        select  article_id,title,attribute_label,summary,type,update_time
         from article
         order by update_time desc
     </select>
 
     <select id="findArchiveByMonth" parameterType="Date" resultType="Article">
-        select  article_id,title,attribute_label,summary,update_time
+        select  article_id,title,attribute_label,summary,type,update_time
         from article
         where DATE_FORMAT(update_time,'%Y-%m') = (DATE_FORMAT(#{update_time},'%Y-%m'))
+        order by update_time desc
+    </select>
+
+    <select id="program_record" resultType="Article">
+        select  article_id,title,attribute_label,summary,type,update_time
+        from article
+        where type = '程序录'
+        order by update_time desc
+    </select>
+
+    <select id="mood" resultType="Article">
+        select  article_id,title,attribute_label,summary,type,update_time
+        from article
+        where type = '心情窗'
         order by update_time desc
     </select>
 </mapper>

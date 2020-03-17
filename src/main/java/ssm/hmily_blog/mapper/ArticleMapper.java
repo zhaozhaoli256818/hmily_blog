@@ -23,4 +23,8 @@ public interface ArticleMapper {
     List<Article> archiveArticle();
 
     List<Article> findArchiveByMonth(Date update_time);
+
+    List<Article> program_record();
+
+    List<Article> mood();
 }
