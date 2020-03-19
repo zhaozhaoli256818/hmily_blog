@@ -33,7 +33,6 @@
 
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -52,22 +51,28 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/1.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/1.jpg"
+                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/2.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/2.jpg"
+                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/3.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/3.jpg"
+                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/4.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/4.jpg"
+                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/5.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/5.jpg"
+                 class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/6.jpg" class="d-block w-100" alt="...">
+            <img style="height: 650px" src="${pageContext.request.contextPath}/static/images/6.jpg"
+                 class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -83,7 +88,7 @@
 <div class="container" style="margin-left: 200px">
     <div class="row">
         <div class="col-2" style="margin-left: -80px">
-            <div class="card shadow text-white bg-info mb-3" style="width: 20rem;height:14rem;margin-top: 20px;">
+            <div class="card shadow  mb-3" style="width: 20rem;height:14rem;margin-top: 20px;background-color: #f7f8ea">
                 <div class="card-body">
                     <i class="fa fa-quote-left" style="float: left;"></i>
                     <p class="card-text" align="center" style="margin-top: 30px">你一直说自己没努力<br><br>
@@ -97,7 +102,7 @@
             </div>
 
 
-            <div class="card shadow text-white bg-success" style="width: 20rem;height:32rem;margin-top: 20px;">
+            <div class="card shadow" style="width: 20rem;height:32rem;margin-top: 20px;background-color: #d8f0f3">
                 <div class="card-body">
                     <h5 align="center" class="card-title">音乐</h5>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
@@ -114,90 +119,102 @@
         </div>
         <div class="col-8" style="margin-left: 55px">
             <div style="margin-left: 100px;margin-top: 20px">
-                    <div class="card" style="width: 600px;height: 300px;">
-                        <a href="javascript:void(0)" onclick="detail(0)"><h5 class="card-header" align="center"><span
-                                id="id0">题目</span></h5></a>
-                        <div class="card-body">
-                            <input id="article_id0" type="hidden">
-                            <span class="badge badge-pill badge-danger" style="margin-left: 20px"
-                                  id="classify0">原创</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
-                            <span  id="time0">
+                <div class="card" style="width: 600px;height: 300px;">
+                    <a href="javascript:void(0)" onclick="detail(0)"><h5 class="card-header" align="center"><span
+                            id="id0">题目</span></h5></a>
+                    <div class="card-body">
+                        <input id="article_id0" type="hidden">
+                        <span class="badge badge-pill badge-danger" style="margin-left: 20px"
+                              id="classify0">原创</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                        <span id="time0">
                                  2020-3-20
                             </span>
-                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
-                            <span id="type0" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                            <span   id="attribute_label0">标签</span>
-                            <img style="margin-left:30px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
-                            <span>阅读数 58</span>
-                            <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
-                                <p class="card-text" id="summary0">文章总结</p>
-                            </div>
-                            <a href="javascript:void(0)" onclick="detail(0)" class="btn btn-primary"
-                               style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
+                        <img style="margin-left:40px "
+                             src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                        <span id="type0" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                        <span id="attribute_label0">标签</span>
+                        <img style="margin-left:30px "
+                             src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                        <span>阅读数 58</span>
+                        <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
+                            <p class="card-text" id="summary0">文章总结</p>
                         </div>
+                        <a href="javascript:void(0)" onclick="detail(0)" class="btn btn-primary"
+                           style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
                     </div>
-                    <br><br>
-                    <div class="card" style="width: 600px;height: 300px;">
-                        <a href="javascript:void(0)" onclick="detail(1)"><h5 class="card-header" align="center"><span
-                                id="id1">题目</span></h5></a>
-                        <div class="card-body">
-                            <input id="article_id1" type="hidden">
-                            <span class="badge badge-pill badge-danger" style="margin-left: 20px"
-                                  id="classify1">原创</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
-                            <span  id="time1">
+                </div>
+                <br><br>
+                <div class="card" style="width: 600px;height: 300px;">
+                    <a href="javascript:void(0)" onclick="detail(1)"><h5 class="card-header" align="center"><span
+                            id="id1">题目</span></h5></a>
+                    <div class="card-body">
+                        <input id="article_id1" type="hidden">
+                        <span class="badge badge-pill badge-danger" style="margin-left: 20px"
+                              id="classify1">原创</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                        <span id="time1">
                                  2020-3-20
                             </span>
-                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
-                            <span  id="type1" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                            <span   id="attribute_label1">标签</span>
-                            <img style="margin-left:30px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
-                            <span>阅读数 58</span>
-                            <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
-                                <p class="card-text" id="summary1">文章总结</p>
-                            </div>
-                            <a href="javascript:void(0)" onclick="detail(1)" class="btn btn-primary"
-                               style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
+                        <img style="margin-left:40px "
+                             src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                        <span id="type1" style="cursor: pointer" onclick="toTypePage(this)">文章类别</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                        <span id="attribute_label1">标签</span>
+                        <img style="margin-left:30px "
+                             src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                        <span>阅读数 58</span>
+                        <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
+                            <p class="card-text" id="summary1">文章总结</p>
                         </div>
+                        <a href="javascript:void(0)" onclick="detail(1)" class="btn btn-primary"
+                           style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
                     </div>
-                    <br><br>
-                    <div class="card" style="width: 600px;height: 300px;">
-                        <a href="javascript:void(0)" onclick="detail(2)"><h5 class="card-header" align="center"><span
-                                id="id2">题目</span></h5></a>
-                        <div class="card-body">
-                            <input id="article_id2" type="hidden">
-                            <span class="badge badge-pill badge-danger" style="margin-left: 20px"
-                                  id="classify2">原创</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/table.svg">
-                            <span  id="time2">
+                </div>
+                <br><br>
+                <div class="card" style="width: 600px;height: 300px;">
+                    <a href="javascript:void(0)" onclick="detail(2)"><h5 class="card-header" align="center"><span
+                            id="id2">题目</span></h5></a>
+                    <div class="card-body">
+                        <input id="article_id2" type="hidden">
+                        <span class="badge badge-pill badge-danger" style="margin-left: 20px"
+                              id="classify2">原创</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/table.svg">
+                        <span id="time2">
                                  2020-3-20
                             </span>
-                            <img style="margin-left:40px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
-                            <span  id="type2" style="cursor: pointer" onclick="toTypePage(this)">类型</span>
-                            <img style="margin-left:50px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                            <span id="attribute_label2">标签</span>
-                            <img style="margin-left:20px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
-                            <span>阅读数 58</span>
-                            <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
-                                <p class="card-text" id="summary2">文章总结</p>
-                            </div>
-                            <a href="javascript:void(0)" onclick="detail(2)" class="btn btn-primary"
-                               style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
+                        <img style="margin-left:40px "
+                             src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
+                        <span id="type2" style="cursor: pointer" onclick="toTypePage(this)">类型</span>
+                        <img style="margin-left:50px "
+                             src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
+                        <span id="attribute_label2">标签</span>
+                        <img style="margin-left:20px "
+                             src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
+                        <span>阅读数 58</span>
+                        <div style="color: #0bc5de;width: 250px;height: 100px;margin-left: 120px;margin-top: 20px">
+                            <p class="card-text" id="summary2">文章总结</p>
                         </div>
+                        <a href="javascript:void(0)" onclick="detail(2)" class="btn btn-primary"
+                           style="margin-top: 30px;margin-left: 430px">>>阅读全文</a>
                     </div>
+                </div>
             </div>
         </div>
 
         <div class="col-2" id="main-right-div">
-            <div class="card text-white bg-dark" style="width: 20rem;height:22rem;margin-top: 20px">
+            <div class="card" style="width: 20rem;height:22rem;margin-top: 20px">
                 <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
                      style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
                      class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">HMILY_BLOG</h5>
+                    <h5 align="center" class="card-title" style="font-family: '微软雅黑'">程序员的小宇宙</h5>
                     <p class="card-text" align="center">负重前行</p>
                 </div>
                 <div class="container" style="position: absolute;left: 15px;top: 210px">
@@ -219,7 +236,7 @@
                     <a class="card-icons" href="https://github.com/zhaozhaoli256818" target="_blank"><i
                             class="fa fa-github" title="活跃不起来滴小github~"></i></a>
                     <a class="card-icons" href="https://gitee.com/zhaozhaoli256818" target="_blank"><i class="fa fa-gg"
-                                                                      title="码码码码码云~"></i></a>
+                                                                                                       title="码码码码码云~"></i></a>
 
                     <a class="card-icons"
                        href="http://wpa.qq.com/msgrd?v=3&amp;uin=1191599851&amp;site=qq&amp;menu=yes"
@@ -291,7 +308,7 @@
 <div style="margin-left: 480px;margin-top: 30px">
     <a href="javascript:void(0)" onclick="changePage(parseInt($('#pageNum').val())-1)">
         <button
-                type="button" class="btn btn-primary" >上一页
+                type="button" class="btn btn-primary">上一页
         </button>
     </a>
 </div>
@@ -299,7 +316,7 @@
 <div style="margin-left: 1015px;margin-top: -40px">
     <a href="javascript:void(0)" onclick="changePage(parseInt($('#pageNum').val())+1)">
         <button
-                type="button" class="btn btn-primary" >下一页
+                type="button" class="btn btn-primary">下一页
         </button>
     </a>
 </div>
@@ -308,12 +325,12 @@
 
 <jsp:include page="footer.jsp"></jsp:include>
 
-
 <script>
     function detail(val) {
         var id = document.getElementById("article_id" + val).value;
         //alert(val)
-        window.location.href = "${pageContext.request.contextPath}/article?article_id=" + id;
+        <%--window.location.href = "${pageContext.request.contextPath}/article?article_id=" + id;--%>
+        window.location.href = "${pageContext.request.contextPath}/article/" + id;
     }
 
     $(function () {
@@ -346,10 +363,11 @@
     Date.prototype.toLocaleString = function () {
         return this.getFullYear() + "/" + (this.getMonth() + 1) + "/" + this.getDate();
     };
+
     function changePage(val) {
         $.ajax({
             type: 'POST',
-            url: "${pageContext.request.contextPath}/index?page="+val,
+            url: "${pageContext.request.contextPath}/index?page=" + val,
             dataType: "json",//期待返回的数据类型
             success: function (data) {
                 $("#pageNum").val(data.pageNum)
@@ -363,17 +381,21 @@
                     $("#article_id" + i.toString()).val(n.article_id)
                     $("#summary" + i.toString()).html(n.summary)
                 });
+                $("body").scrollTop(600)
             },
             error: function (data) {
                 alert("error" + data);
             }
         });
     }
+
     function toTypePage(val) {
         //alert($(val).html())
-        window.location.href = "${pageContext.request.contextPath}/toProgramRecordOrOther?type="+$(val).html()
+        window.location.href = "${pageContext.request.contextPath}/toProgramRecordOrOther?type=" + $(val).html()
     }
 
 </script>
+
 </body>
+
 </html>

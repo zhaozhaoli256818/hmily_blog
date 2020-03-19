@@ -5,10 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ssm.hmily_blog.pojo.Article;
 import ssm.hmily_blog.service.ArticleService;
@@ -31,8 +28,8 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    @RequestMapping(value = "article")
-    public String articleDetail(String article_id, Model model) {
+    @RequestMapping(value = "article/{article_id}")
+    public String articleDetail(@PathVariable("article_id") String article_id, Model model) {
         Article article = articleService.findArticleByArticleId(Long.parseLong(article_id));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String update_time = sdf.format(article.getUpdate_time());

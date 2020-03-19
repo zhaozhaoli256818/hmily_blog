@@ -20,7 +20,6 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
     <!-- 标题栏浮动隐藏JS -->
-    <script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js" type="text/javascript"></script>
 
     <style>
         .circleImg {
@@ -29,14 +28,18 @@
             height: 50px;
         }
     </style>
+
 </head>
 <body>
 <%--导航栏--%>
 <%--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">--%>
-<nav class="navbar text-light navbar-expand-lg navbar-light" style="background:rgba(40,42,44,.6);border-color: rgba(40,42,44,.0);height: 40px">
+<nav class="navbar text-light navbar-expand-lg navbar-light" style="background:rgba(15, 31, 39,.5);border-color: rgba(40,42,44,.0);height: 40px">
     <img src="${pageContext.request.contextPath}/static/images/tx.jpeg" class="circleImg" id="circleImg" style="width: 30px;height: 30px"/>
     &nbsp;&nbsp;
-    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp"><h3 style="font-family: 'Adobe 楷体 Std R';">hmily_blog</h3></a>
+    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
+        <h3 style="font-size: 17px;font-family: '微软雅黑';color: #0a001f">程序员的小宇宙</h3>
+<%--        <img src="${pageContext.request.contextPath}/static/images/GetFontImg.aspx.gif">--%>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,7 +70,7 @@
             </li>
             <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/pencil.svg">
             <li class="nav-item">
-                <a class="nav-link" href="#">留言板</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/toMessageBoard">留言板</a>
             </li>
             <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/at.svg">
             <li class="nav-item">
@@ -114,7 +117,5 @@
 <%--        </form>--%>
     </div>
 </nav>
-
-
 </body>
 </html>

@@ -23,7 +23,7 @@
 <div class="container" style="margin-left: 200px">
     <div class="row">
         <div class="col-2" style="margin-left: -120px">
-            <div class="card shadow text-white bg-info mb-3" style="width: 20rem;height:14rem;margin-top: 20px;">
+            <div class="card shadow  mb-3" style="width: 20rem;height:14rem;margin-top: 20px;background-color: #f7f8ea">
                 <div class="card-body">
                     <i class="fa fa-quote-left" style="float: left;"></i>
                     <p class="card-text" align="center" style="margin-top: 30px">你一直说自己没努力<br><br>
@@ -37,7 +37,7 @@
             </div>
 
 
-            <div class="card shadow text-white bg-success" style="width: 20rem;height:25rem;margin-top: 20px;">
+            <div class="card shadow " style="width: 20rem;height:25rem;margin-top: 20px;background-color: #d8f0f3">
                 <div class="card-body">
                     <div class="main-left  am-show-lg-only">
                         <i class="fa fa-quote-left" style="float: left"></i><br>
@@ -50,8 +50,8 @@
                         </div>
                         <i class="fa fa-quote-right" style="float: right;"></i>
                         <div style="margin-left: 70px;margin-top: 100px;letter-spacing: 1px; font-size: 19px;">
-                            <div style="margin-left: -60px">无论夜晚多么黑暗，</div>
-                            <div style="margin-left: 20px">黎明总会如约而至。</div>
+                            <div style="margin-left: -60px;font-size: 20px;font-weight: 700">无论夜晚多么黑暗，</div>
+                            <div style="margin-left: 10px;font-size: 20px;font-weight: 700">黎明总会如约而至。</div>
                         </div>
                     </div>
 
@@ -130,7 +130,7 @@
 
                         <div style="float: left">
                             <c:if test="${not empty lastArticle}">
-                                <a href="${pageContext.request.contextPath}/article?article_id=${lastArticle.article_id}"><<
+                                <a href="${pageContext.request.contextPath}/article/${lastArticle.article_id}"><<
                                     上一篇 ${lastArticle.title}</a>
                             </c:if>
                             <c:if test="${empty lastArticle}">
@@ -139,7 +139,7 @@
                         </div>
                         <div style="float: right">
                             <c:if test="${not empty nextArticle}">
-                                <a href="${pageContext.request.contextPath}/article?article_id=${nextArticle.article_id}">下一篇 ${nextArticle.title}>></a>
+                                <a href="${pageContext.request.contextPath}/article/${nextArticle.article_id}">下一篇 ${nextArticle.title}>></a>
                             </c:if>
                             <c:if test="${empty nextArticle}">
                                 <a href="javascript:void(0)">亲~~,后面没有了</a>
@@ -150,10 +150,18 @@
 
 
             </div>
+<%--            留言板--%>
+            <div class="shadow card" style="margin-top: 40px;width:630px;margin-left: 100px ">
+                <div class="comment_headling" style="margin-left: 30px;margin-top: 20px"><i style="width: 30px;" class="fa fa-comments fa-fw" aria-hidden="true"></i><span style="font-size: 20px;font-weight: 700"> 评论</span></div>
+
+                <div class="card-body">
+                    <div id="vcomments"></div>
+                </div>
+            </div>
         </div>
 
         <div class="col-2">
-            <div class="card shadow bg-light mb-3" style="width: 20rem; position: fixed;left: 1100px;top:90px">
+            <div class="card shadow bg-light mb-3" style="width: 20rem; position: fixed;left: 1100px;top:60px">
                 <div class="card-header">
                     <div style="float: left;margin-left: 60px;cursor: pointer" onclick="changeDiv(0)">文章目录</div>
                     <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
@@ -168,7 +176,7 @@
                          style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
                          class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">HMILY_BLOG</h5>
+                        <h5 align="center" class="card-title" style="font-family: 'Adobe 楷体 Std R'">程序员的小宇宙</h5>
                         <p class="card-text" align="center">负重前行</p>
                     </div>
                     <div class="container" style="position: absolute;left: 15px;top: 210px">
@@ -213,6 +221,8 @@
 </div>
 
 
+
+
 <jsp:include page="../../footer.jsp"></jsp:include>
 
 
@@ -254,8 +264,16 @@
 
 
 </script>
-
-
+<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'RkIlY5T9HreBkWUxmhEOFQHj-gzGzoHsz',
+        appKey: 'szoE3aNLlIMiLF0b2sPWsu5y',
+        placeholder: '各位道友,请举手发言',
+        avatar:'wavatar' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+    })
+</script>
 </body>
 </html>
 
