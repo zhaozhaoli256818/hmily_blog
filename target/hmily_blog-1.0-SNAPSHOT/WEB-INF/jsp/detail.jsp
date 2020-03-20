@@ -18,7 +18,7 @@
    </head>
 <body>
 <jsp:include page="../../header.jsp"></jsp:include>
-
+<div class="wrap" style="position: relative;top:40px">
 <%--卡片--%>
 <div class="container" style="margin-left: 200px">
     <div class="row">
@@ -161,17 +161,17 @@
         </div>
 
         <div class="col-2">
-            <div class="card shadow bg-light mb-3" style="width: 20rem; position: fixed;left: 1100px;top:60px">
+            <div class="card shadow  mb-3" style="width: 20rem; position: fixed;left: 1100px;top:60px;background-color: #c994e6 ">
                 <div class="card-header">
                     <div style="float: left;margin-left: 60px;cursor: pointer" onclick="changeDiv(0)">文章目录</div>
                     <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
                 </div>
                 <div align="center" id="toc">
-                    <div class="markdown-body editormd-preview-container" id="custom-toc-container">
+                    <div class="markdown-body editormd-preview-container" id="custom-toc-container" style="background-color: #c994e6 ">
                         #custom-toc-container
                     </div>
                 </div>
-                <div id="author" class="card  bg-light" style="width: 20rem;height:22rem;display: none">
+                <div id="author" class="card " style="width: 20rem;height:22rem;display: none;background-color: #c994e6 ">
                     <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
                          style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
                          class="card-img-top" alt="...">
@@ -219,11 +219,15 @@
 
     </div>
 </div>
-
+</div>
 
 
 
 <jsp:include page="../../footer.jsp"></jsp:include>
+<%--导航栏下滑消失上滑出现--%>
+<script  type="text/javascript"  src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+<script  type="text/javascript"  src="${pageContext.request.contextPath}/static/js/main.js"></script>
 
 
 <script src="${pageContext.request.contextPath}/static/js/jquery-1.11.3.min.js"></script>

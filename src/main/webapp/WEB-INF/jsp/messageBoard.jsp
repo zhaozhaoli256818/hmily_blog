@@ -23,55 +23,59 @@
 <%--<div style="height: 600px;width: 1500px">--%>
 <%--    <img src="${pageContext.request.contextPath}/static/images/6.jpg">--%>
 <%--</div>--%>
-<div class="head-one card shadow mb-3"
-     style="width: 20rem;height:14rem;position: absolute;left: 25px;top: 80px;background-color: #f7f8ea">
-    <div class="card-body">
-        <i class="fa fa-quote-left" style="float: left;"></i>
-        <p class="card-text" align="center" style="margin-top: 30px">你一直说自己没努力<br><br>
+<div class="wrap" style="position: relative;top:40px">
+    <div class="head-one card shadow mb-3"
+         style="width: 20rem;height:14rem;position: absolute;left: 25px;top: 80px;background-color: #f7f8ea">
+        <div class="card-body">
+            <i class="fa fa-quote-left" style="float: left;"></i>
+            <p class="card-text" align="center" style="margin-top: 30px">你一直说自己没努力<br><br>
 
-            那你努力100%试一下啊<br><br>
+                那你努力100%试一下啊<br><br>
 
-            你的天空你不想飞一下吗？</p>
-        <i class="fa fa-quote-right" style="margin-left: 270px"></i>
+                你的天空你不想飞一下吗？</p>
+            <i class="fa fa-quote-right" style="margin-left: 270px"></i>
 
-    </div>
-</div>
-
-<div class="card shadow"
-     style="width: 20rem;height:25rem;position: absolute;left: 25px;top: 350px;background-color: #d8f0f3;">
-    <div class="card-body">
-        <div class="main-left  am-show-lg-only">
-            <i class="fa fa-quote-left" style="float: left"></i><br>
-            <div style="margin-left: 50px">
-                <p>你应该要学着做你自己</p>
-                <p>面对真实的自我</p>
-                <p>只要做到这一点</p>
-                <p>你就什么都不用惧怕</p>
-                <p style="margin-left: 80px">--- 《猫的报恩》</p>
-            </div>
-            <i class="fa fa-quote-right" style="float: right;"></i>
-            <div style="margin-left: 70px;margin-top: 100px;letter-spacing: 1px; font-size: 19px;">
-                <div style="margin-left: -60px;font-size: 20px;font-weight: 700">无论夜晚多么黑暗，</div>
-                <div style="margin-left: 10px;font-size: 20px;font-weight: 700">黎明总会如约而至。</div>
-            </div>
         </div>
+    </div>
 
-    </div>
-</div>
-<%--            留言板--%>
-<div class="shadow card" style="margin-top: 40px;width:700px;margin-left: 400px ;background-color: #e4d5cf;">
+    <div class="card shadow"
+         style="width: 20rem;height:25rem;position: absolute;left: 25px;top: 350px;background-color: #d8f0f3;">
+        <div class="card-body">
+            <div class="main-left  am-show-lg-only">
+                <i class="fa fa-quote-left" style="float: left"></i><br>
+                <div style="margin-left: 50px">
+                    <p>你应该要学着做你自己</p>
+                    <p>面对真实的自我</p>
+                    <p>只要做到这一点</p>
+                    <p>你就什么都不用惧怕</p>
+                    <p style="margin-left: 80px">--- 《猫的报恩》</p>
+                </div>
+                <i class="fa fa-quote-right" style="float: right;"></i>
+                <div style="margin-left: 70px;margin-top: 100px;letter-spacing: 1px; font-size: 19px;">
+                    <div style="margin-left: -60px;font-size: 20px;font-weight: 700">无论夜晚多么黑暗，</div>
+                    <div style="margin-left: 10px;font-size: 20px;font-weight: 700">黎明总会如约而至。</div>
+                </div>
+            </div>
 
-    <div class="comment_headling" style="margin-left: 30px;margin-top: 60px"><i style="font-size: 30px;" class="fa fa-comments fa-fw" aria-hidden="true"></i><span style="font-size: 30px;font-weight: 700"> 留言板</span></div>
-    <div style="width: 600px;margin-top: 30px;margin-left: 40px;font-family: sans-serif;letter-spacing: 0.5em">
-        <p style="color: #2F2F2F">
-        <strong>亲爱的小伙伴你好</strong>，我是程序员的小宇宙，欢迎你来到这里。虽然不知道你是谁，来自哪里，又将去向何方，但能够在这里与你相遇，相信这一定是上天注定的缘分。在这里，你可以畅所欲言，你的留言时刻鞭笞着我努力的来更新小站。
-        本网站的内容主要为工作生活过程中的技术总结、感悟等，如果你对本站内容有任何疑问，或者有任何的想法，欢迎留言交流。
-        </p>
+        </div>
     </div>
-    <div class="card-body" style="margin-top: 50px">
-        <div id="vcomments"></div>
+    <%--            留言板--%>
+    <div class="shadow card" style="margin-top: 40px;width:700px;margin-left: 400px ;background-color: #e4d5cf;">
+
+        <div class="comment_headling" style="margin-left: 30px;margin-top: 60px"><i style="font-size: 30px;"
+                                                                                    class="fa fa-comments fa-fw"
+                                                                                    aria-hidden="true"></i><span
+                style="font-size: 30px;font-weight: 700"> 留言板</span></div>
+        <div style="width: 600px;margin-top: 30px;margin-left: 40px;font-family: sans-serif;letter-spacing: 0.5em">
+            <p style="color: #2F2F2F">
+                <strong>亲爱的小伙伴你好</strong>，我是程序员的小宇宙，欢迎你来到这里。虽然不知道你是谁，来自哪里，又将去向何方，但能够在这里与你相遇，相信这一定是上天注定的缘分。在这里，你可以畅所欲言，你的留言时刻鞭笞着我努力的来更新小站。
+                本网站的内容主要为工作生活过程中的技术总结、感悟等，如果你对本站内容有任何疑问，或者有任何的想法，欢迎留言交流。
+            </p>
+        </div>
+        <div class="card-body" style="margin-top: 50px">
+            <div id="vcomments"></div>
+        </div>
     </div>
-</div>
 </div>
 
 <div class="card shadow  mb-3" style="width: 20rem; position: fixed;left: 1190px;top:80px;background-color: #e7daac">
@@ -129,12 +133,15 @@
 
     </div>
 </div>
-
-
-
+</div>
 
 
 <jsp:include page="../../footer.jsp"></jsp:include>
+<%--导航栏下滑消失上滑出现--%>
+<script type="text/javascript" src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/main.js"></script>
+
 <script type="text/javascript">
 
 
@@ -156,7 +163,7 @@
         appId: 'RkIlY5T9HreBkWUxmhEOFQHj-gzGzoHsz',
         appKey: 'szoE3aNLlIMiLF0b2sPWsu5y',
         placeholder: '各位道友,请举手发言',
-        avatar:'wavatar' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+        avatar: 'wavatar' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
     })
 </script>
 </body>

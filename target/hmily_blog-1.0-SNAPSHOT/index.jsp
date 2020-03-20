@@ -33,13 +33,15 @@
 
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/myicon.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/css/animate.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 
 <jsp:include page="header.jsp"></jsp:include>
-
 <%--轮播图--%>
-
+<div class="wrap" style="position: relative;top:40px">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 700px">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -214,7 +216,8 @@
                      style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
                      class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 align="center" class="card-title" style="font-family: '微软雅黑'">程序员的小宇宙</h5>
+
+                                        <h5 align="center" class="card-title" style="font-family: '微软雅黑'">程序员的小宇宙</h5>
                     <p class="card-text" align="center">负重前行</p>
                 </div>
                 <div class="container" style="position: absolute;left: 15px;top: 210px">
@@ -320,10 +323,14 @@
         </button>
     </a>
 </div>
-
+</div>
 <div style="height: 100px"></div>
 
 <jsp:include page="footer.jsp"></jsp:include>
+
+<script  type="text/javascript"  src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+<script  type="text/javascript"  src="${pageContext.request.contextPath}/static/js/main.js"></script>
 
 <script>
     function detail(val) {

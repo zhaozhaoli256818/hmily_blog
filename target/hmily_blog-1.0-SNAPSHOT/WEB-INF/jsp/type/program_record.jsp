@@ -23,6 +23,7 @@
 </head>
 <body>
 <jsp:include page="../../../header.jsp"></jsp:include>
+<div class="wrap" style="position: relative;top:40px">
 <div class="head-one card shadow mb-3"
      style="width: 20rem;height:14rem;position: absolute;left: 25px;top: 80px;background-color: #f7f8ea">
     <div class="card-body">
@@ -247,7 +248,12 @@
         </button>
     </a>
 </div>
+</div>
 <jsp:include page="../../../footer.jsp"></jsp:include>
+<%--导航栏下滑消失上滑出现--%>
+<script  type="text/javascript"  src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+<script  type="text/javascript"  src="${pageContext.request.contextPath}/static/js/main.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/timeline/lib/jquery.cntl.js"></script>
 <script type="text/javascript">

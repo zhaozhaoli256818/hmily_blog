@@ -27,18 +27,31 @@
             width: 50px;
             height: 50px;
         }
+
+         .headroom {
+             will-change: transform;
+             transition: transform 200ms linear;
+         }
+        .headroom--pinned {
+            transform: translateY(0);
+
+        }
+        .headroom--unpinned {
+            transform: translateY(-40px);
+        }
+
     </style>
 
 </head>
 <body>
 <%--导航栏--%>
 <%--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">--%>
-<nav class="navbar text-light navbar-expand-lg navbar-light" style="background:rgba(15, 31, 39,.5);border-color: rgba(40,42,44,.0);height: 40px">
+<nav class="navbar text-light navbar-expand-lg navbar-light navbar-fixed-top" style="position:fixed;z-index:99;width:100%;top:0;background:rgba(246, 250, 252, 5);border-color: rgba(40,42,44,.0);height: 40px">
     <img src="${pageContext.request.contextPath}/static/images/tx.jpeg" class="circleImg" id="circleImg" style="width: 30px;height: 30px"/>
     &nbsp;&nbsp;
     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
-        <h3 style="font-size: 17px;font-family: '微软雅黑';color: #0a001f">程序员的小宇宙</h3>
-<%--        <img src="${pageContext.request.contextPath}/static/images/GetFontImg.aspx.gif">--%>
+        <img
+             src="${pageContext.request.contextPath}/static/images/tubiao.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

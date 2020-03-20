@@ -26,7 +26,7 @@
 </head>
 <body>
 <jsp:include page="../../header.jsp"></jsp:include>
-
+<div class="wrap" style="position: relative;top:40px">
 <div id="layout">
     <header>
         <div class="input-group input-group-lg">
@@ -61,8 +61,12 @@
     </div>
 </div>
 
-
+</div>
 <jsp:include page="../../footer.jsp"></jsp:include>
+<%--导航栏下滑消失上滑出现--%>
+<script  type="text/javascript"  src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+<script  type="text/javascript"  src="${pageContext.request.contextPath}/static/js/main.js"></script>
 
 <script>
     <%--$(function () {--%>
