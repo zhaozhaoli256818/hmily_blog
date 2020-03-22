@@ -7,34 +7,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b59e627-470d-4bb7-be2c-aa5119713757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/swing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icons/tubiao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/tubiao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/jiayou.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/liuyan.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/css/htmleaf-demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/css/jquery.eeyellow.Timeline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/cat01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/cat02.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/cat03.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/dog01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/dog02.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/dog03.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/nature01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/img/rabbit01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/timeline/js/jquery.eeyellow.Timeline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/archive.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/archive.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssm/hmily_blog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssm/hmily_blog/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/messageBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/messageBoard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/type/mood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/type/mood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/type/program_record.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/type/program_record.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/myicon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/myicon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/archive.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/archive.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssm/hmily_blog/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssm/hmily_blog/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/classes/ssm/hmily_blog/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/classes/ssm/hmily_blog/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/messageBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/messageBoard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/type/mood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/type/mood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/type/program_record.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/WEB-INF/jsp/type/program_record.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/static/css/myicon.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/static/css/myicon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/hmily_blog-1.0-SNAPSHOT/static/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -71,9 +79,9 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -86,6 +94,9 @@
         <option value="$PROJECT_DIR$/.idea" />
       </set>
     </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -114,28 +125,31 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/ssm/hmily_blog/service" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.20605469" />
     <property name="project.structure.side.proportion" value="0.1331237" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.AboutConfigurable" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/timeline/img" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/timeline/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/timeline/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/type" />
       <recent name="$PROJECT_DIR$/src/main/webapp/static" />
       <recent name="$PROJECT_DIR$/src/main/webapp/editormd" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/static/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/static/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/static/images/icons" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/static/js" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/static/timeline" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.47">
@@ -148,6 +162,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="hmily_blog" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,6 +224,9 @@
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="46657" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="36943" />
+      </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -219,6 +243,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -258,11 +297,13 @@
     <list>
       <item itemvalue="Application.MD5Util" />
       <item itemvalue="Application.testMpper" />
+      <item itemvalue="Application.test" />
       <item itemvalue="JUnit.testMpper.test" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.47" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.MD5Util" />
         <item itemvalue="Application.testMpper" />
         <item itemvalue="JUnit.testMpper.test" />
@@ -341,7 +382,10 @@
       <workItem from="1584578735253" duration="10310000" />
       <workItem from="1584594294842" duration="12049000" />
       <workItem from="1584607535614" duration="11025000" />
-      <workItem from="1584663558400" duration="9968000" />
+      <workItem from="1584663558400" duration="15475000" />
+      <workItem from="1584753959407" duration="932000" />
+      <workItem from="1584754910016" duration="20649000" />
+      <workItem from="1584846520676" duration="5402000" />
     </task>
     <task id="LOCAL-00001" summary="完成登录注册功能">
       <created>1583473442178</created>
@@ -441,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584606971773</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加导航栏上滚出现下滚消失特效">
+      <created>1584678445804</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584678445804</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +527,8 @@
     <MESSAGE value="完成文章详情页面中文章目录部分" />
     <MESSAGE value="加入了图标，增加了程序录，心情窗模块" />
     <MESSAGE value="添加留言板功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加留言板功能" />
+    <MESSAGE value="添加导航栏上滚出现下滚消失特效" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加导航栏上滚出现下滚消失特效" />
   </component>
   <component name="WindowStateProjectService">
     <state x="559" y="190" key="#Template_Data_Languages" timestamp="1584359823316">
@@ -505,11 +557,11 @@
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
     <state x="707" y="345" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1013@0.0.1920.1013" timestamp="1583663401227" />
-    <state x="443" y="155" key="CommitChangelistDialog2" timestamp="1584606971113">
+    <state x="443" y="155" key="CommitChangelistDialog2" timestamp="1584678445211">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="145" key="CommitChangelistDialog2/0.0.1920.1013@0.0.1920.1013" timestamp="1584084373007" />
-    <state x="443" y="155" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1584606971113" />
+    <state x="443" y="155" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1584678445211" />
     <state width="504" height="466" key="DebuggerActiveHint" timestamp="1583829358497">
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
@@ -522,100 +574,100 @@
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
     <state x="786" y="382" width="346" height="331" key="Github.ShareDialog/0.0.1920.1013@0.0.1920.1013" timestamp="1584083630195" />
-    <state width="1575" height="65" key="GridCell.Tab.0.bottom" timestamp="1584677337430">
+    <state width="839" height="129" key="GridCell.Tab.0.bottom" timestamp="1584846618785">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757770" />
-    <state width="1575" height="65" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337430" />
-    <state width="1575" height="65" key="GridCell.Tab.0.center" timestamp="1584677337430">
+    <state width="839" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584846618785" />
+    <state width="839" height="129" key="GridCell.Tab.0.center" timestamp="1584846618785">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.0.center/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757770" />
-    <state width="1575" height="65" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337430" />
-    <state width="1575" height="65" key="GridCell.Tab.0.left" timestamp="1584677337430">
+    <state width="839" height="129" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584846618785" />
+    <state width="839" height="129" key="GridCell.Tab.0.left" timestamp="1584846618784">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.0.left/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757769" />
-    <state width="1575" height="65" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337430" />
-    <state width="1575" height="65" key="GridCell.Tab.0.right" timestamp="1584677337430">
+    <state width="839" height="129" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584846618784" />
+    <state width="839" height="129" key="GridCell.Tab.0.right" timestamp="1584846618785">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.0.right/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757770" />
-    <state width="1575" height="65" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337430" />
-    <state width="1575" height="65" key="GridCell.Tab.1.bottom" timestamp="1584677337431">
+    <state width="839" height="129" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584846618785" />
+    <state width="841" height="129" key="GridCell.Tab.1.bottom" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.1.bottom/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757771" />
-    <state width="1575" height="65" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.1.center" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.1.center" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.1.center/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757770" />
-    <state width="1575" height="65" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.1.left" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.1.left" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.1.left/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757770" />
-    <state width="1575" height="65" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.1.right" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.1.right" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.1.right/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757771" />
-    <state width="1575" height="65" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.2.bottom" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.2.bottom" timestamp="1584795942708">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.2.bottom/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757772" />
-    <state width="1575" height="65" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.2.center" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942708" />
+    <state width="841" height="129" key="GridCell.Tab.2.center" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.2.center/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757772" />
-    <state width="1575" height="65" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.2.left" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.2.left" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.2.left/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757772" />
-    <state width="1575" height="65" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.2.right" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.2.right" timestamp="1584795942707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.2.right/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757772" />
-    <state width="1575" height="65" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.3.bottom" timestamp="1584677337432">
+    <state width="841" height="129" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942707" />
+    <state width="841" height="129" key="GridCell.Tab.3.bottom" timestamp="1584795942708">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.3.bottom/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757772" />
-    <state width="1575" height="65" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337432" />
-    <state width="1575" height="65" key="GridCell.Tab.3.center" timestamp="1584677337432">
+    <state width="841" height="129" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942708" />
+    <state width="841" height="129" key="GridCell.Tab.3.center" timestamp="1584795942708">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.3.center/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757771" />
-    <state width="1575" height="65" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337432" />
-    <state width="1575" height="65" key="GridCell.Tab.3.left" timestamp="1584677337431">
+    <state width="841" height="129" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942708" />
+    <state width="841" height="129" key="GridCell.Tab.3.left" timestamp="1584795942708">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.3.left/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757771" />
-    <state width="1575" height="65" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337431" />
-    <state width="1575" height="65" key="GridCell.Tab.3.right" timestamp="1584677337432">
+    <state width="841" height="129" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942708" />
+    <state width="841" height="129" key="GridCell.Tab.3.right" timestamp="1584795942708">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1575" height="177" key="GridCell.Tab.3.right/0.0.1920.1013@0.0.1920.1013" timestamp="1584192757771" />
-    <state width="1575" height="65" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584677337432" />
-    <state x="447" y="78" width="1205" height="867" key="SettingsEditor" timestamp="1584239264071">
+    <state width="841" height="129" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584795942708" />
+    <state x="502" y="115" width="1205" height="867" key="SettingsEditor" timestamp="1584846956830">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="447" y="73" width="1205" height="867" key="SettingsEditor/0.0.1920.1013@0.0.1920.1013" timestamp="1584084115266" />
-    <state x="447" y="78" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584239264071" />
+    <state x="502" y="115" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584846956830" />
     <state x="689" y="230" width="540" height="524" key="StructurePopup" timestamp="1583318778907">
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
     <state x="689" y="230" width="540" height="524" key="StructurePopup/0.0.1920.1013@0.0.1920.1013" timestamp="1583318778907" />
-    <state x="559" y="245" key="Vcs.Push.Dialog.v2" timestamp="1584607576397">
+    <state x="559" y="245" key="Vcs.Push.Dialog.v2" timestamp="1584678474170">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="230" key="Vcs.Push.Dialog.v2/0.0.1920.1013@0.0.1920.1013" timestamp="1584084559998" />
-    <state x="559" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584607576397" />
+    <state x="559" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584678474170" />
     <state width="960" height="506" key="XDebugger.FullValuePopup" timestamp="1583556768716">
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
@@ -624,11 +676,11 @@
       <screen x="0" y="0" width="1920" height="1013" />
     </state>
     <state x="708" y="273" key="chooseDestDirectoryDialog/0.0.1920.1013@0.0.1920.1013" timestamp="1583313941748" />
-    <state x="564" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1584663662248">
+    <state x="564" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1584846523001">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="564" y="334" key="com.intellij.ide.util.TipDialog/0.0.1920.1013@0.0.1920.1013" timestamp="1584170126018" />
-    <state x="564" y="356" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584663662248" />
+    <state x="564" y="356" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584846523001" />
     <state x="695" y="305" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1584084253914">
       <screen x="0" y="0" width="1920" height="1013" />
     </state>

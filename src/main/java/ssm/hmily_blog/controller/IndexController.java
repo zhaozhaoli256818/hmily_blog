@@ -47,4 +47,9 @@ public class IndexController {
         return "archive";
     }
 
+    @RequestMapping("/update")
+    public  String update(){
+        return "update";
+    }
+
 }

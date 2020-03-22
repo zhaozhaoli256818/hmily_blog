@@ -25,7 +25,7 @@
 <%--</div>--%>
 <div class="wrap" style="position: relative;top:40px">
     <div class="head-one card shadow mb-3"
-         style="width: 20rem;height:14rem;position: absolute;left: 25px;top: 80px;background-color: #f7f8ea">
+         style="width: 20rem;height:14rem;position: absolute;left: 25px;background-color: #f7f8ea">
         <div class="card-body">
             <i class="fa fa-quote-left" style="float: left;"></i>
             <p class="card-text" align="center" style="margin-top: 30px">你一直说自己没努力<br><br>
@@ -72,6 +72,7 @@
                 本网站的内容主要为工作生活过程中的技术总结、感悟等，如果你对本站内容有任何疑问，或者有任何的想法，欢迎留言交流。
             </p>
         </div>
+        <img src="${pageContext.request.contextPath}/static/images/liuyan.jpeg">
         <div class="card-body" style="margin-top: 50px">
             <div id="vcomments"></div>
         </div>
@@ -163,8 +164,19 @@
         appId: 'RkIlY5T9HreBkWUxmhEOFQHj-gzGzoHsz',
         appKey: 'szoE3aNLlIMiLF0b2sPWsu5y',
         placeholder: '各位道友,请举手发言',
-        avatar: 'wavatar' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+        notify: true,
+        avatar: 'robohash' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+    })
+    $(document).ready(function(){
+        $('.vemoji-btn').text('😀');
+        $("#vcomments").on('click', 'span.vat',function(){
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
     })
 </script>
+<style>
+
+</style>
 </body>
 </html>

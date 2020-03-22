@@ -71,7 +71,7 @@
             </li>
             <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/folder-symlink.svg">
             <li class="nav-item">
-                <a class="nav-link" href="#">更新</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/update">更新</a>
             </li>
             <img style="width: 2em;height: 2em;margin-left: 20px" src="${pageContext.request.contextPath}/static/images/icons/music-player.svg">
             <li class="nav-item">
