@@ -27,4 +27,8 @@ public interface ArticleMapper {
     List<Article> program_record();
 
     List<Article> mood();
+
+    List<Article> lastArticle();
+
+    List<Article> tag(String attribute_label);
 }

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .card-icons {
     font-size: 20px;
     text-align: center;
@@ -7,11 +12,13 @@
 
 
 }
-.am-nav>li>a:focus, .am-nav>li>a:hover {
+
+.am-nav > li > a:focus, .am-nav > li > a:hover {
     background-color: transparent;
 }
+
 .fa-github {
-    border-radius:50%;
+    border-radius: 50%;
     width: 2.63vw;
     height: 2.63vw;
     line-height: 1.4vw !important;
@@ -19,8 +26,9 @@
     color: black;
     border: 1px solid black;
 }
+
 .fa-weixin {
-    border-radius:50%;
+    border-radius: 50%;
     width: 2.63vw;
     height: 2.63vw;
     line-height: 1.4vw !important;
@@ -28,8 +36,9 @@
     color: #248a34;
     border: 1px solid #248a34;
 }
+
 .fa-gg {
-    border-radius:50%;
+    border-radius: 50%;
     width: 2.63vw;
     height: 2.63vw;
     line-height: 1.4vw !important;
@@ -37,8 +46,9 @@
     color: orange;
     border: 1px solid orange;;
 }
+
 .fa-qq {
-    border-radius:50%;
+    border-radius: 50%;
     width: 2.63vw;
     height: 2.63vw;
     line-height: 1.4vw !important;
@@ -46,8 +56,9 @@
     color: #2894FF;
     border: 1px solid #2894FF;
 }
+
 .fa-weibo {
-    border-radius:50%;
+    border-radius: 50%;
     width: 2.63vw;
     height: 2.63vw;
     line-height: 1.4vw !important;
@@ -55,27 +66,32 @@
     color: red;
     border: 1px solid red;
 }
+
 .fa-weixin img {
     display: none;
 }
+
 /* 图标翻转特效 */
 .fa:hover {
     animation: fanzhuan 1s forwards;
 }
+
 @keyframes fanzhuan {
     0% {
         transform: none;
         filter: none;
     }
-    100% { transform: rotateY(360deg);
+    100% {
+        transform: rotateY(360deg);
         filter: sepia(1) saturate(90) hue-rotate(285deg);
     }
 }
+
 .card-weixin-divout {
     width: 9.9vw;
     height: 9.9vw;
-    border:1px solid silver;
-    border-radius:8px;
+    border: 1px solid silver;
+    border-radius: 8px;
     position: absolute;
     top: 51px;
     left: -63.5%;
@@ -83,26 +99,29 @@
     display: none;
     background-color: #eeeeee;
 }
+
 .card-weixin-divin {
-    width:10px;
-    height:10px;
-    border:1px solid silver;
-    position:relative;
-    left:50%;
+    width: 10px;
+    height: 10px;
+    border: 1px solid silver;
+    position: relative;
+    left: 50%;
     margin-left: -5px;
-    top:-7px;
-    transform:rotate(45deg);
-    background-color:#eeeeee;
-    border-right:0px;
-    border-bottom:0px;
+    top: -7px;
+    transform: rotate(45deg);
+    background-color: #eeeeee;
+    border-right: 0px;
+    border-bottom: 0px;
     display: none;
 }
+
 #weixin-img {
     position: absolute;
     left: -14px;
     top: -12px;
     width: 11.8vw;
 }
+
 .circleImg {
     border-radius: 30px;
     width: 50px;
@@ -110,7 +129,7 @@
 }
 
 /*设置评论头像旋转*/
-.v .vlist .vcard .vimg:hover {
+.v .vlist .vcard .vimg:hover .card-img-top:hover {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

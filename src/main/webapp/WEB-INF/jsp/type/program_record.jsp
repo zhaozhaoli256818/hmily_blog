@@ -138,7 +138,7 @@
                     <span style="cursor: pointer" onclick="toTypePage(this)" id="type0">类型</span>
                     <%--                            <span style="margin-left: 50px" id="type0">文章类别</span>--%>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                    <span   id="attribute_label0">标签</span>
+                    <span   id="attribute_label0" style="cursor:pointer;" onclick="toTag(this)">标签</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                     <span>58</span>
 
@@ -158,7 +158,7 @@
                     <img style="margin-left:20px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
                     <span style="cursor: pointer" onclick="toTypePage(this)" id="type1">类型</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                    <span   id="attribute_label1">标签</span>
+                    <span   id="attribute_label1" style="cursor:pointer;" onclick="toTag(this)">标签</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                     <span>58</span>
                 </div>
@@ -178,7 +178,7 @@
                     <img style="margin-left:20px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
                     <span style="cursor: pointer" onclick="toTypePage(this)" id="type2">类型</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                    <span   id="attribute_label2">标签</span>
+                    <span   id="attribute_label2" style="cursor:pointer;" onclick="toTag(this)">标签</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                     <span>58</span>
                 </div>
@@ -197,7 +197,7 @@
                     <img style="margin-left:20px " src="${pageContext.request.contextPath}/static/images/icons/folder-fill.svg">
                     <span style="cursor: pointer" onclick="toTypePage(this)" id="type3">类型</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                    <span   id="attribute_label3">标签</span>
+                    <span   id="attribute_label3" style="cursor:pointer;" onclick="toTag(this)">标签</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                     <span>58</span>
                 </div>
@@ -217,7 +217,7 @@
                     <span style="cursor: pointer" onclick="toTypePage(this)" id="type4">类型</span>
                     <%--                            <span style="margin-left: 50px" id="type0">文章类别</span>--%>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                    <span   id="attribute_label4">标签</span>
+                    <span   id="attribute_label4" style="cursor:pointer;" onclick="toTag(this)">标签</span>
                     <img style="margin-left:10px " src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                     <span>58</span>
                 </div>
@@ -335,7 +335,10 @@
         //alert($(val).html())
         window.location.href = "${pageContext.request.contextPath}/toProgramRecordOrOther?type="+$(val).html()
     }
-
+    function toTag(val) {
+        //alert($(val).html())
+        window.location.href = "${pageContext.request.contextPath}/toTag/"+$(val).html()
+    }
 </script>
 
 

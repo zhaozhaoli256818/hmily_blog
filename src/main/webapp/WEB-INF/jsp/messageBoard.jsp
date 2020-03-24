@@ -79,20 +79,14 @@
     </div>
 </div>
 
-<div class="card shadow  mb-3" style="width: 20rem; position: fixed;left: 1190px;top:80px;background-color: #e7daac">
-    <div class="card-header">
+<div class="card shadow  mb-3" style="width: 20rem; position: fixed;left: 1190px;top:80px;">
+    <div class="card-header"style="font-weight: 700;font-size: 17px">
         <div style="float: left;margin-left: 60px;cursor: pointer" onclick="changeDiv(0)">最新文章</div>
         <div style="float: left;margin-left: 20px;cursor: pointer" onclick="changeDiv(1)">作者信息</div>
     </div>
-    <div align="center" id="article_type">
-        <div class="card-header">
-            <a href="javascript:void(0)" onclick="toTypePage(this)">程序录</a>
-        </div>
-        <div class="card-header">
-            <a href="javascript:void(0)" onclick="toTypePage(this)">心情窗</a>
-        </div>
+    <div align="center" id="article_type" style="margin-top:5px;margin-left:20px;font-size: 17px;color: #6495ED;">
     </div>
-    <div id="author" class="card" style="width: 20rem;height:22rem;display: none;background-color: #e7daac">
+    <div id="author" class="card" style="width: 20rem;height:22rem;display: none;">
         <img src="${pageContext.request.contextPath}/static/images/tx.jpeg"
              style="border-radius: 60px;  width: 100px;height: 100px;margin-left: 100px;margin-top: 10px"
              class="card-img-top" alt="...">
@@ -174,6 +168,27 @@
             $('textarea#veditor').focus();
         })
     })
+
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/lastArticle",
+            dataType: "json",
+            success: function (data) {
+                // alert(data[0].title)
+                $.each(data,function (i,n) {
+                    var $div = "<div style='text-align: justify'><span style='line-height:20px;cursor: pointer;' onclick='detail("+n.article_id+")'>"+n.title+"</span><hr></div>"
+                    $("#article_type").append($div)
+                })
+
+            }
+        });
+
+    });
+
+    function detail(val) {
+        window.location.href = "${pageContext.request.contextPath}/article/" + val;
+    }
 </script>
 <style>
 

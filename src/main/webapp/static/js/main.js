@@ -6,5 +6,24 @@ window.onload = function () {
     headroom.init();
 }
 
+function loadArticelType(val,position) {
+    $.ajax({
+        type: "GET",
+        url: '${pageContext.request.contextPath}/dict?type_code='+val,
+        dataType: 'json',
+        contentType: "application/json",
+        // cache: false,
+        success: function (data) {
+            $.each(data,function (i,obj) {
+                //alert(obj['item_name'])
+                var $option = $("<option value='"+obj['item_name']+"'>"+obj['item_name']+"</option>");
+                //alert($option.val())
+                $("#"+position).append($option);
+
+            });
+
+        }
+    });
+}
 
 

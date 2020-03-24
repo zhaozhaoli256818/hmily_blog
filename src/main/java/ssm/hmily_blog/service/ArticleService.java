@@ -23,4 +23,8 @@ public interface ArticleService {
     List<Article> program_record(Integer page, Integer pageSize);
 
     List<Article> mood(Integer page, Integer pageSize);
+
+    List<Article> lastArticle();
+
+    List<Article> tag(String attribute_label, Integer page, Integer pageSize);
 }

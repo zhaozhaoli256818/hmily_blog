@@ -59,4 +59,18 @@
         where type = '心情窗'
         order by update_time desc
     </select>
+
+    <select id="lastArticle" resultType="Article">
+        select title,article_id
+        from article
+        order by update_time desc
+        limit 5
+    </select>
+
+    <select id="tag" parameterType="String" resultType="Article">
+       select  article_id,title,attribute_label,summary,type,update_time
+        from article
+        where attribute_label = #{attribute_label}
+        order by update_time desc
+    </select>
 </mapper>

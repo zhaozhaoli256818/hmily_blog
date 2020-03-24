@@ -9,7 +9,6 @@ import ssm.hmily_blog.service.ArticleService;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
@@ -68,5 +67,14 @@ public class ArticleServiceImpl implements ArticleService {
         PageHelper.startPage(page,pageSize);
         List<Article> list = articleMapper.mood();
         return list;
+    }
+
+    public List<Article> lastArticle() {
+        return articleMapper.lastArticle();
+    }
+
+    public List<Article> tag(String attribute_label, Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        return articleMapper.tag(attribute_label);
     }
 }

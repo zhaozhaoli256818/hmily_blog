@@ -32,10 +32,10 @@
 
         ul {
             color: #6495ED;
-            list-style-type: decimal;
+            list-style-type: none;
         }
         ul li{
-            line-height: 3;
+            line-height: 2;
         }
     </style>
 </head>
@@ -149,7 +149,7 @@
                                                 href="${pageContext.request.contextPath}/toProgramRecordOrOther?type=${article.type}">${article.type}</a></span>
                             <img style="margin-left:50px "
                                  src="${pageContext.request.contextPath}/static/images/icons/tag-fill.svg">
-                            <span id="attribute_label0">${article.attribute_label}</span>
+                            <span id="attribute_label0" style="cursor:pointer;" onclick="toTag(this)">${article.attribute_label}</span>
                             <img style="margin-left:50px "
                                  src="${pageContext.request.contextPath}/static/images/icons/eye.svg">
                             <span>阅读数 58</span>
@@ -298,7 +298,6 @@
         }
     }
 
-
 </script>
 <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
 <script>
@@ -310,6 +309,10 @@
         notify: true,
         avatar: 'wavatar' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
     })
+    function toTag(val) {
+        //alert($(val).html())
+        window.location.href = "${pageContext.request.contextPath}/toTag/"+$(val).html()
+    }
 </script>
 </body>
 </html>

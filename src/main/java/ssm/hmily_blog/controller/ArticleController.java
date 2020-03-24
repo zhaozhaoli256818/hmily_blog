@@ -155,4 +155,27 @@ public class ArticleController {
         }
         return "type/"+url;
     }
+
+    @RequestMapping("/lastArticle")
+    @ResponseBody
+    public List<Article> lastArticle(){
+        List<Article> list =  articleService.lastArticle();
+        return list;
+    }
+    //分类
+    @RequestMapping(value = "tag/{attribute_label}")
+    @ResponseBody
+    public PageInfo tag(@PathVariable("attribute_label") String attribute_label, Model model,
+                      @RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
+                      @RequestParam(name = "pageSize", required = true, defaultValue = "5") Integer pageSize) {
+        List<Article> list =  articleService.tag(attribute_label,page,pageSize);
+        PageInfo<Article> pageInfo = new PageInfo<Article>(list);
+        return pageInfo;
+    }
+    //转发到分类页面
+    @RequestMapping("toTag/{attribute_label}")
+    public String toTag(@PathVariable("attribute_label") String attribute_label, Model model){
+        model.addAttribute("attribute_label",attribute_label);
+        return "tag";
+    }
 }
